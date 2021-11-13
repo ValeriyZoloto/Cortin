@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Roboto-Black';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Roboto-Black'),
+    url(../fonts/Roboto-Black.woff2) format('woff2'),
+    url(../fonts/Roboto-Black.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Roboto-Bold'),
+    url(../fonts/Roboto-Bold.woff2) format('woff2'),
+    url(../fonts/Roboto-Bold.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Roboto-Regular'),
+    url(../fonts/Roboto-Regular.woff2) format('woff2'),
+    url(../fonts/Roboto-Regular.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Roboto-Light'),
+    url(../fonts/Roboto-Light.woff2) format('woff2'),
+    url(../fonts/Roboto-Light.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-LightItalic';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Roboto-LightItalic'),
+    url(../fonts/Roboto-LightItalic.woff2) format('woff2'),
+    url(../fonts/Roboto-LightItalic.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('FuturaPT-Bold'),
+    url(../fonts/FuturaPT-Bold.woff2) format('woff2'),
+    url(../fonts/FuturaPT-Bold.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: local('FuturaPT-Medium'),
+    url(../fonts/FuturaPT-Medium.woff2) format('woff2'),
+    url(../fonts/FuturaPT-Medium.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Book';
+  font-weight: 400;
+  font-style: normal;
+  src: local('FuturaPT-Book'),
+    url(../fonts/FuturaPT-Book.woff2) format('woff2'),
+    url(../fonts/FuturaPT-Book.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: local('FuturaPT-Light'),
+    url(../fonts/FuturaPT-Light.woff2) format('woff2'),
+    url(../fonts/FuturaPT-Light.woff) format('woff');
+  font-display: swap;
+}

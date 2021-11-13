@@ -1,0 +1,177 @@
+.footer {
+  padding: 0px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__goods {
+    width: 100%;
+    padding: 61px 107px 0px 60px;
+    background-color: $bg-light-1;
+  }
+
+  &__goods-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__goods-first {
+    max-width: 132px;
+    margin-right: 42px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__goods-item {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    position: relative;
+    @extend %roboto-300;
+    font-size: 14px;
+    line-height: 1.1;
+    color: $white;
+    transition: 0.5s;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 0px;
+      height: 2px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  &__goods-link {
+    position: relative;
+    @extend %roboto-300;
+    font-size: 14px;
+    line-height: 1.1;
+    color: $white;
+    transition: 0.5s;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 0px;
+      height: 2px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  &__goods-second {}
+
+  &__goods-bottom {
+    padding: 80px 0px 37px 0px;
+  }
+
+  &__dealers {
+    width: 100%;
+    padding: 61px 40px 0px 99px;
+    background-color: $bg-light-2;
+  }
+
+  &__dealers-top {
+    margin-bottom: 61px;
+  }
+
+  &__dealers-bottom {
+    padding-bottom: 31px;
+  }
+
+  &__contacts {
+    width: 100%;
+    background-color: $bg-light-3;
+    padding: 61px 35px 0px 66px;
+  }
+
+  &__tel {
+    display: inline-block;
+    position: relative;
+    @extend %roboto-700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $white;
+    margin-bottom: 16px;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 0px;
+      height: 2px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  &__address {
+    display: inline-block;
+    position: relative;
+    @extend %roboto-300;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 0px;
+      height: 2px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  &__mail {
+    display: block;
+    max-width: 72px;
+    position: relative;
+    @extend %roboto-300;
+    font-size: 14px;
+    line-height: 1.1;
+    margin-bottom: 27px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+}

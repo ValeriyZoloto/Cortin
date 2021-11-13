@@ -1,0 +1,120 @@
+.header {
+  padding: 40px 0px;
+
+  @include media-w($smx) {
+    padding: 4px 0px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include media-w($smx) {
+      padding: 0 5px;
+    }
+  }
+
+  &__logo {
+    margin-right: 131px;
+
+    @include media-w($mdb) {
+      margin-right: 80px;
+    }
+
+    @include media-w($mdl) {
+      margin-right: auto;
+    }
+
+    @include media-w($smx) {
+      width: 90px;
+      height: 15px;
+    }
+
+  }
+
+  &__btn {
+    margin-right: 51px;
+    @extend %btn-cortin;
+
+    @include media-w($mdb) {
+      margin-right: 31px;
+    }
+
+    @include media-w($mdl) {
+      display: none;
+    }
+
+    &:focus {
+      @extend %btn-cortin-focus;
+    }
+
+    &:hover {
+      @extend %btn-cortin-hover;
+    }
+
+    &:active {
+      @extend %btn-cortin-active;
+    }
+  }
+
+  &__tel {
+    width: 20px;
+    height: 19px;
+    display: none;
+
+    @include media-w($smx) {
+      display: block;
+      margin-right: 22px;
+    }
+
+    &:focus {
+      .header__svg {
+        fill: $title;
+      }
+    }
+
+    &:hover {
+      .header__svg {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .header__svg {
+        box-shadow: 10px 10px 10px 10px $accent;
+      }
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 19px;
+    fill: $white;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    @include media-w($smx) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: $bg-light;
+      display: block;
+      text-align: center;
+      padding: 100px 0;
+      transition: transform 0.5s;
+      z-index: 2;
+      height: 100vh;
+      overflow: scroll;
+      transform: translateY(-200%);
+    }
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+}
