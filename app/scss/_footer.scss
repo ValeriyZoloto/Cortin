@@ -7,7 +7,7 @@
 
   &__goods {
     width: 100%;
-    padding: 61px 107px 0px 60px;
+    padding: 61px 107px 0px 56px;
     background-color: $bg-light-1;
   }
 
@@ -17,8 +17,13 @@
   }
 
   &__goods-first {
-    max-width: 132px;
-    margin-right: 42px;
+    width: 158px;
+    margin-right: 14px;
+  }
+
+  &__goods-second {
+    width: 127px;
+
   }
 
   &__item {
@@ -26,7 +31,7 @@
   }
 
   &__goods-item {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   &__link {
@@ -84,10 +89,11 @@
   &__goods-second {}
 
   &__goods-bottom {
-    padding: 80px 0px 37px 0px;
+    padding: 61px 0px 37px 0px;
   }
 
   &__dealers {
+    max-width: 321px;
     width: 100%;
     padding: 61px 40px 0px 99px;
     background-color: $bg-light-2;
@@ -173,5 +179,99 @@
   &__socials {
     display: flex;
     align-items: center;
+  }
+
+  &__item {}
+
+  &__socials-item-telegram {
+    max-width: 21px;
+    margin-right: 24px;
+  }
+
+  &__socials-item-vk {
+    max-width: 25px;
+    margin-right: 29px;
+  }
+
+  &__socials-item-fasebok {
+    max-width: 13px;
+    margin-right: 29px;
+  }
+
+  &__socials-item-instagram {
+    max-width: 23px;
+    margin-right: 24px;
+  }
+
+  &__socials-item-pinterest {
+    max-width: 25px;
+    margin-right: 0;
+  }
+
+  .socials__link {
+    transition: 0.5s;
+
+    &:focus {
+      box-shadow: 10px 0px 10px 10px $accent;
+    }
+  }
+
+  &__socials-svg {
+    fill: #4C75A5;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
+  }
+
+  &__socials-svg-telegram {
+    width: 21px;
+    height: 19px;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
+  }
+
+  &__socials-svg-vk {
+    width: 25px;
+    height: 16px;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
+  }
+
+  &__socials-svg-fasebok {
+    width: 13px;
+    height: 25px;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
+  }
+
+  &__socials-svg-instagram {
+    width: 23px;
+    height: 24px;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
+  }
+
+  &__socials-svg-pinterest {
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $title;
+    }
   }
 }
