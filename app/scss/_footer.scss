@@ -1,37 +1,95 @@
 .footer {
+  position: relative;
   padding: 0px;
 
   &__inner {
     display: flex;
+
+    @include media-w($lgv) {
+      flex-direction: column;
+    }
   }
 
   &__goods {
     width: 100%;
-    padding: 61px 107px 0px 56px;
+    padding: 60px 40px 0px 40px;
     background-color: $bg-light-1;
+
+    @include media-w($lgv) {
+      padding: 56px 107px 51px 65px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    @include media-w($xs) {
+      padding: 56px 40px 47px 40px;
+    }
   }
 
   &__goods-top {
+    margin-left: auto;
+    max-width: 300px;
     display: flex;
     justify-content: space-between;
+
+    @include media-w($lgv) {
+      margin-left: 0px;
+    }
+
+    @include media-w($xs) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__goods-first {
     width: 158px;
     margin-right: 14px;
+
+    @include media-w($xs) {
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
   }
 
   &__goods-second {
     width: 127px;
 
+    @include media-w($xs) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
   }
 
   &__item {
     margin-bottom: 15px;
+
+    @include media-w($xs) {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
+
+  &__item-straight {
+    @include media-w($xs) {
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+
 
   &__goods-item {
     margin-bottom: 17px;
+
+    @include media-w($xs) {
+      margin-bottom: 13px;
+    }
   }
 
   &__link {
@@ -89,31 +147,106 @@
   &__goods-second {}
 
   &__goods-bottom {
+    max-width: 300px;
+    margin-left: auto;
     padding: 61px 0px 37px 0px;
+
+    @include media-w($lgv) {
+      padding: 0px 0px 37px 0px;
+      margin-left: 0px;
+    }
+
+    @include media-w($xs) {
+      padding: 0px 0px 22px 0px;
+    }
   }
 
   &__dealers {
-    max-width: 321px;
+    max-height: 288px;
+    max-width: 307px;
     width: 100%;
     padding: 61px 40px 0px 99px;
     background-color: $bg-light-2;
+
+    @include media-w($lgv) {
+      height: auto;
+      padding: 40px 40px 0px 40px;
+      text-align: center;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include media-w($xs) {
+      padding: 34px 40px 0px 40px;
+      height: 152px;
+      text-align: center;
+    }
   }
 
   &__dealers-top {
     margin-bottom: 61px;
+
+    @include media-w($lgv) {
+      text-align: left;
+      margin-right: 61px;
+    }
+
+    @include media-w($xs) {
+      margin-right: 0;
+      text-align: center;
+    }
   }
 
   &__dealers-bottom {
     padding-bottom: 31px;
+
+    @include media-w($lgv) {
+      text-align: left;
+    }
+
+    @include media-w($xs) {
+      padding-bottom: 69px;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 
   &__contacts {
     width: 100%;
     background-color: $bg-light-3;
-    padding: 61px 35px 0px 66px;
+    padding: 61px 35px 0px 94px;
+
+    @include media-w($lgv) {
+      padding: 61px 40px 41px 40px;
+    }
+
+    @include media-w($xs) {
+      padding: 40px 40px 36px 40px;
+      margin-bottom: 144px;
+      text-align: center;
+    }
+  }
+
+  &__contacts-wrapper {
+    max-width: 300px;
+
+    @include media-w($lgv) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__tel {
+    margin-left: 2px;
     display: inline-block;
     position: relative;
     @extend %roboto-700;
@@ -121,6 +254,10 @@
     line-height: 1.2;
     color: $white;
     margin-bottom: 16px;
+
+    @include media-w($xs) {
+      font-size: 16px;
+    }
 
     &::after {
       display: block;
@@ -147,6 +284,10 @@
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 14px;
+
+    @include media-w($xs) {
+      max-width: 200px;
+    }
 
     &::after {
       display: block;
@@ -177,30 +318,51 @@
   }
 
   &__socials {
+    margin-left: -3px;
     display: flex;
     align-items: center;
+
+    @include media-w($xs) {
+      margin-left: 2px;
+    }
   }
 
   &__item {}
 
   &__socials-item-telegram {
     max-width: 21px;
-    margin-right: 24px;
+    margin-right: 22px;
+
+    @include media-w($xs) {
+      margin-right: 18px;
+    }
   }
 
   &__socials-item-vk {
-    max-width: 25px;
+    max-width: 23px;
     margin-right: 29px;
+
+    @include media-w($xs) {
+      margin-right: 25px;
+    }
   }
 
   &__socials-item-fasebok {
     max-width: 13px;
-    margin-right: 29px;
+    margin-right: 27px;
+
+    @include media-w($xs) {
+      margin-right: 22px;
+    }
   }
 
   &__socials-item-instagram {
-    max-width: 23px;
+    max-width: 22px;
     margin-right: 24px;
+
+    @include media-w($xs) {
+      margin-right: 22px;
+    }
   }
 
   &__socials-item-pinterest {
@@ -272,6 +434,28 @@
 
     &:hover {
       fill: $title;
+    }
+  }
+
+  &__logo {
+
+    &--white {
+      display: none;
+
+      @include media-w($xs) {
+        display: block;
+      }
+    }
+
+    &--black {
+      @include media-w($xs) {
+        display: none;
+      }
+    }
+
+    .footer__logo-img {
+      width: 115px;
+      height: 19px;
     }
   }
 }

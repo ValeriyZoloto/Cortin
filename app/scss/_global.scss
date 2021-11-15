@@ -41,12 +41,13 @@ body {
 }
 
 .title {
-  // text-align: center;
-  // @extend %roboto-700;
-  // font-size: 48px;
-  // line-height: 1.35;
-  // color: $title;
-  // text-transform: uppercase;
+
+  @extend %futuraPT-400;
+  font-size: 46px;
+  line-height: 1.35;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: $title-dark;
 
   // @include media-w($sms) {
   //   font-size: 40px;
@@ -58,10 +59,10 @@ body {
 }
 
 .logo {
-  &__img {
+  .logo__img {
     @include media-w($smx) {
       width: 90px;
-      height: 15px !important;
+      height: 15px;
     }
   }
 }
