@@ -2,6 +2,14 @@
   position: relative;
   padding: 101px 0px 132px 0px;
 
+  @include media-w($lgv) {
+    padding: 57px 0px 132px 0px;
+  }
+
+  @include media-w($xxs) {
+    padding: 42px 0px 34px 0px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -12,39 +20,164 @@
     border-radius: 50%;
     background-color: $bg-light;
     z-index: -1;
+
+    @include media-w($smz) {
+      width: 513px;
+      height: 513px;
+      left: -188px;
+      top: 13px;
+    }
+
+    @include media-w($smm) {
+      width: 413px;
+      height: 413px;
+      left: -188px;
+      top: 13px;
+    }
+
+    @include media-w($xxs) {
+      width: 313px;
+      height: 313px;
+      left: -188px;
+      top: 13px;
+    }
   }
 
-  &__inner {
+  &__inner-upper {
     display: flex;
     flex-wrap: wrap;
+
+    @include media-w($lgv) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__inner-bottom {
+    display: flex;
+    flex-wrap: wrap;
+
+    .production__item {
+      &:first-child {
+        margin-top: -278px;
+        margin-left: 3px;
+
+        @include media-w($lgv) {
+          margin-top: 0px;
+          margin-left: 3px;
+          max-width: 49%;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 116px;
+        margin-top: 132px;
+
+        @include media-w($lgv) {
+          margin-left: auto;
+          margin-top: 0px;
+          max-width: 49%;
+        }
+
+        @include media-w($xxsl) {
+          margin-right: -10px;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: -366px;
+        margin-left: 5px;
+
+        @include media-w($lgv) {
+          margin-top: 0px;
+          margin-left: 5px;
+          max-width: 49%;
+        }
+
+        @include media-w($smx) {
+          margin-top: -17px;
+        }
+
+        @include media-w($xxsl) {
+          margin-top: -19px;
+        }
+      }
+
+      &:nth-child(4) {
+        margin-left: 603px;
+        margin-top: -211px;
+
+        @include media-w($lgv) {
+          margin-top: 136px;
+          margin-left: auto;
+          max-width: 473px;
+        }
+
+        @include media-w($mdl) {
+          max-width: 390px;
+        }
+
+        @include media-w($smx) {
+          margin-top: 82px;
+          max-width: 333px;
+        }
+
+        @include media-w($smz) {
+          max-width: 298px;
+        }
+
+        @include media-w($sms) {
+          max-width: 228px;
+        }
+
+        @include media-w($smm) {
+          max-width: 200px;
+          margin-top: 25px;
+        }
+
+        @include media-w($xss) {
+          margin-top: 17px;
+        }
+
+        @include media-w($xs) {
+          max-width: 183px;
+        }
+
+        @include media-w($xxs) {
+          max-width: 140px;
+        }
+
+        @include media-w($xxsl) {
+          margin-top: 29px;
+          max-width: 128px;
+          margin-left: 11px;
+        }
+
+      }
+    }
   }
 
   &__item {
 
     &:first-child {
       margin-top: 75px;
-    }
 
-    &:nth-child(2) {
-      margin-left: -45px;
-    }
-
-    &:nth-child(3) {
-      margin-top: -278px;
-    }
-
-    &:nth-child(4) {
-      margin-left: 120px;
-      margin-top: 133px;
-    }
-
-    &:nth-child(5) {
-      margin-top: -366px;
+      @include media-w($lgv) {
+        margin-top: 0px;
+      }
     }
 
     &:last-child {
-      margin-top: -213px;
-      margin-left: 600px;
+      margin-top: -310px;
+      margin-left: 608px;
+
+      @include media-w($lgv) {
+        margin-top: 40px;
+        margin-left: 0px;
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
 
@@ -53,6 +186,10 @@
 
     &:first-child {
       margin-bottom: 12px;
+
+      @include media-w($xxs) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -63,9 +200,39 @@
     @extend %futuraPT-400;
     font-size: 24px;
     line-height: 2;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $white;
+
+    @include media-w($smz) {
+      padding-right: 32px;
+      font-size: 18px;
+      line-height: 1.33;
+    }
+
+    @include media-w($sms) {
+      font-size: 17px;
+    }
+
+    @include media-w($smm) {
+      font-size: 16px;
+    }
+
+    @include media-w($xss) {
+      font-size: 14px;
+    }
+
+    @include media-w($xs) {
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.06em;
+    }
+
+    &--roman {
+      @include media-w($xxs) {
+        margin-left: 6px;
+      }
+    }
 
     &::after {
       content: '';
@@ -77,33 +244,292 @@
       transform: translateY(-50%);
       background-image: url(../images/productions/arrow-right.png);
       @extend %bg-center-cover;
+
+      @include media-w($smz) {
+        width: 23px;
+        height: 6px;
+      }
     }
 
-    &--austrian {
+    &--austrian-upper {
       margin-bottom: 13px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
+
+      @include media-w($lgv) {
+        display: none;
+      }
     }
+
+    &--austrian-bottom {
+      margin-top: 13px;
+      letter-spacing: 0.07em;
+      display: none;
+
+      @include media-w($lgv) {
+        display: inline-block;
+      }
+
+      @include media-w($xxs) {
+        margin-top: 9px;
+        margin-left: 2px;
+        max-width: 166px;
+
+        &::after {
+          @include media-w($xxs) {
+            right: 22px;
+            top: 8px;
+          }
+        }
+      }
+
+
+    }
+
 
     &--french {
       margin-top: 5px;
       letter-spacing: 0.08em;
+
+      @include media-w($xxsl) {
+        margin-top: 0;
+        margin-left: -3px;
+
+        &::after {
+          right: 22px;
+          top: 8px;
+        }
+      }
     }
 
-    &--london {
+    &--london-upper {
       margin-bottom: 16px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
+
+      @include media-w($lgv) {
+        display: none;
+      }
+    }
+
+    &--london-bottom {
+      margin-top: 16px;
+      letter-spacing: 0.06em;
+
+      @include media-w($lgv) {
+        display: inline-block;
+      }
+
+      @include media-w($xxs) {
+        margin-top: 9px;
+
+        &::after {
+          left: 0;
+          top: 44px;
+        }
+      }
+    }
+
+    &--straight {
+      letter-spacing: 0.07em;
+
+      @include media-w($xxsl) {
+        margin-left: -3px;
+        margin-top: 7px;
+
+        &::after {
+          top: 26px;
+          left: 0px;
+        }
+      }
     }
   }
 
   &__img {
     object-fit: cover;
 
-    &--roman {}
+    @include media-w($md) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &--french {
+      @include media-w($mdl) {
+        height: 509px;
+      }
+
+      @include media-w($smx) {
+        height: 450px;
+      }
+
+      @include media-w($smz) {
+        height: 400px;
+      }
+
+      @include media-w($sms) {
+        height: 340px;
+      }
+
+      @include media-w($smm) {
+        height: 250px;
+      }
+
+      @include media-w($xss) {
+        height: 200px;
+      }
+
+      @include media-w($xxs) {
+        height: 178px;
+        max-width: 128px;
+      }
+    }
+
+    &--roman {
+      @include media-w($lgv) {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include media-w($mdl) {
+        height: 509px;
+      }
+
+      @include media-w($smx) {
+        height: 450px;
+      }
+
+      @include media-w($smz) {
+        height: 400px;
+      }
+
+      @include media-w($sms) {
+        height: 340px;
+      }
+
+      @include media-w($smm) {
+        height: 250px;
+      }
+
+      @include media-w($xss) {
+        height: 240px;
+      }
+
+      @include media-w($xxs) {
+        height: 223px;
+      }
+    }
+
+    &--austrian {
+      @include media-w($lgv) {
+        height: 439px;
+      }
+
+      @include media-w($mdl) {
+        height: 350px;
+      }
+
+      @include media-w($smx) {
+        height: 300px;
+      }
+
+      @include media-w($smz) {
+        height: 250px;
+      }
+
+      @include media-w($sms) {
+        height: 200px;
+      }
+
+      @include media-w($smm) {
+        height: 185px;
+      }
+
+      @include media-w($xss) {
+        height: 150px;
+      }
+
+      @include media-w($xxs) {
+        height: 122px;
+        max-width: 128px;
+      }
+    }
+
+    &--london {
+      @include media-w($lgv) {
+        height: 439px;
+      }
+
+      @include media-w($mdl) {
+        height: 350px;
+      }
+
+      @include media-w($smx) {
+        height: 300px;
+      }
+
+      @include media-w($smz) {
+        height: 250px;
+      }
+
+      @include media-w($sms) {
+        height: 200px;
+      }
+
+      @include media-w($smm) {
+        height: 185px;
+      }
+
+      @include media-w($xss) {
+        height: 150px;
+      }
+
+      @include media-w($xxs) {
+        width: 128px;
+        height: 125px;
+      }
+    }
+
+    &--straight {
+      @include media-w($lgv) {
+        height: 600px;
+      }
+
+      @include media-w($mdl) {
+        height: 509px;
+      }
+
+      @include media-w($smx) {
+        height: 450px;
+      }
+
+      @include media-w($smz) {
+        height: 400px;
+      }
+
+      @include media-w($sms) {
+        height: 340px;
+      }
+
+      @include media-w($smm) {
+        height: 250px;
+      }
+
+      @include media-w($xss) {
+        height: 200px;
+      }
+
+      @include media-w($xxs) {
+        height: 169px;
+      }
+    }
   }
 
   &__title {
     max-width: 651px;
     margin-bottom: 17px;
+
+    @include media-w($lgv) {
+      text-align: center;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -112,5 +538,25 @@
     font-size: 16px;
     line-height: 2;
     color: $text;
+    margin-left: 3px;
+
+    @include media-w($lgv) {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include media-w($sms) {
+      font-size: 15px;
+    }
+
+    @include media-w($smm) {
+      font-size: 14px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 12px;
+      line-height: 1.67;
+      max-width: 283px;
+    }
   }
 }

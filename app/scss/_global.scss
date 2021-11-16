@@ -49,13 +49,18 @@ body {
   text-transform: uppercase;
   color: $title-dark;
 
-  // @include media-w($sms) {
-  //   font-size: 40px;
-  // }
+  @include media-w($sms) {
+    font-size: 36px;
+  }
 
-  // @include media-w($xxs) {
-  //   font-size: 32px;
-  // }
+  @include media-w($smm) {
+    font-size: 30px;
+  }
+
+  @include media-w($xxs) {
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }
 
 .logo {
