@@ -1,6 +1,6 @@
 .production {
   position: relative;
-  padding: 101px 0px 132px 0px;
+  padding: 101px 0px 88px 0px;
 
   @include media-w($lgv) {
     padding: 57px 0px 132px 0px;
@@ -106,7 +106,7 @@
 
       &:nth-child(4) {
         margin-left: 603px;
-        margin-top: -211px;
+        margin-top: -275px;
 
         @include media-w($lgv) {
           margin-top: 136px;
@@ -203,6 +203,11 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $white;
+    transition: 0.5s;
+
+    &:hover {
+      color: $bg-light-hover;
+    }
 
     @include media-w($smz) {
       padding-right: 32px;

@@ -184,3 +184,19 @@ body {
     }
   }
 }
+
+.btn {
+  @extend %btn;
+
+  &:focus {
+    @extend %btn-focus;
+  }
+
+  &:hover {
+    @extend %btn-hover;
+  }
+
+  &:active {
+    @extend %btn-active;
+  }
+}

@@ -6,12 +6,19 @@ $text:#8CAAC8;
 $white: #FFFFFF;
 $orange:#FF7A44;
 $red-light:#FE8A90;
+$red-light-1:#FF8A8D;
 $brown:#CB9A74;
+$placeholder:#5C82A8;
 $bg-light:#233E59;
+$bg-light-hover:#426186;
 $bg-light-1:#2A486B;
 $bg-light-2:#203B5A;
 $bg-light-3:#18304D;
+$bg-light-4:#5B82A9;
 $bg:#12253B;
+$line:#385980;
+$accent-hover:#57A5FF;
+$accent-active:#207EEA;
 
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
@@ -66,10 +73,12 @@ $lgv: 1190px;
 $mdb: 1110px;
 $md: 1025px;
 $mdl: 992px;
-$sm: 860px;
+$sm: 900px;
 $smx: 768px;
 $smz: 700px;
 $sms: 620px;
+$ssm:562px;
+$snm:506px;
 $smm: 500px;
 $xss: 479px;
 $xs: 450px;
@@ -140,40 +149,45 @@ $xxsl: 330px;
 
 /*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
 /*::::::::::::::::::::::::::наследование для кнопки:::::::::::::::::::::::::::::*/
-// %btn {
-//   width: 240px;
-//   height: 70px;
-//   padding: 23px 5px;
-//   background-color: $accent;
-//   @extend %inter-600;
-//   font-size: 20px;
-//   line-height: 1.2;
-//   color: $white;
-//   border: 1px solid transparent;
+%btn {
+  width: 230px;
+  height: 58px;
+  padding: 13px 5px 15px 5px;
+  background-color: $accent;
+  @extend %roboto-700;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $white;
+  border: 1px solid transparent;
+  transition: 0.5s;
 
-//   @include media-w($md) {
-//     width: 206px;
-//     height: 59px;
-//     font-size: 16px;
-//     padding: 20px 5px;
-//   }
+  //   @include media-w($md) {
+  //     width: 206px;
+  //     height: 59px;
+  //     font-size: 16px;
+  //     padding: 20px 5px;
+  //   }
 
-//   @include media-w($mdl) {
-//     width: 177px;
-//     height: 50px;
-//     font-size: 14px;
-//     padding: 16px 5px;
-//   }
-// }
+  //   @include media-w($mdl) {
+  //     width: 177px;
+  //     height: 50px;
+  //     font-size: 14px;
+  //     padding: 16px 5px;
+  //   }
+}
 
-// %btn-hover {
-//   background-color: $accent-hover;
-//   color: $white;
-// }
+%btn-focus {
+  box-shadow: 10px 10px 10px 10px $text;
+}
 
-// %btn-active {
-//   background-color: $accent-active;
-// }
+%btn-hover {
+  background-color: $accent-hover;
+  color: $white;
+}
+
+%btn-active {
+  background-color: $accent-active;
+}
 
 // %checkbox-hiden {
 //   width: 1px;
