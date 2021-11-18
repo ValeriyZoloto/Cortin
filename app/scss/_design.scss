@@ -1,0 +1,342 @@
+.design {
+  padding: 110px 0px 107px 0px;
+
+  @include media-w($mdl) {
+    padding: 90px 0px 107px 0px;
+  }
+
+  @include media-w($smx) {
+    padding: 80px 0px 107px 0px;
+  }
+
+  @include media-w($xs) {
+    padding: 67px 0px 107px 0px;
+  }
+
+  &__title {
+    padding: 0px 4px 0px 12px;
+    max-width: 735px;
+    margin: 0 auto;
+    line-height: 1.17;
+    letter-spacing: 0.07em;
+    margin-bottom: 69px;
+
+    @include media-w($smx) {
+      text-align: center;
+      margin-bottom: 49px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 20px;
+    }
+
+    @include media-w($xxsl) {
+      font-size: 22px;
+      line-height: 1.36;
+    }
+
+    & span {
+      display: inline-block;
+
+      @include media-w($xs) {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    @include media-w($lgv) {
+      flex-wrap: wrap;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 30px;
+    }
+
+    @include media-w($sms) {
+      margin-bottom: 20px;
+    }
+
+    @include media-w($smm) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 347px;
+
+    &:first-child {
+      @include media-w($mds) {
+        max-width: 48%;
+        margin-bottom: 21px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include media-w($mds) {
+        max-width: 48%;
+      }
+    }
+
+    &:last-child {
+      @include media-w($mds) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 184px;
+    justify-content: space-between;
+    background-color: $bg-card;
+    box-shadow: 12px 22px 32px rgba(18, 37, 59, 0.15);
+    border-radius: 20px;
+    transition: 0.5s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 113px;
+      height: 102px;
+      background-image: url(../images/design/intersect.png);
+      @extend %bg-center-cover;
+      z-index: -1px;
+    }
+
+    &:hover {
+      box-shadow: 10px 10px 10px 10px $accent;
+
+      .design__svg {
+        fill: $accent;
+      }
+
+      .design__content {
+        color: $accent;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 3px $accent;
+      }
+    }
+  }
+
+  &__link-one {
+    padding: 34px 26px 15px 43px;
+
+    @include media-w($sms) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 29px 14px 13px 15px;
+      height: 206px;
+      text-align: center;
+    }
+  }
+
+  &__link-two {
+    padding: 34px 23px 25px 42px;
+
+    @include media-w($sms) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 29px 18px 22px 19px;
+      height: 206px;
+      text-align: center;
+    }
+  }
+
+  &__link-three {
+    padding: 34px 31px 26px 41px;
+
+    @include media-w($sms) {
+      padding: 47px 24px 22px 49px;
+    }
+
+    @include media-w($xs) {
+      height: 130px;
+    }
+
+  }
+
+  &__content {
+    @extend %roboto-400;
+    font-size: 18px;
+    line-height: 1.33;
+    color: $text;
+    margin-bottom: auto;
+
+    @include media-w($sms) {
+      font-size: 16px;
+      line-height: 1.67;
+    }
+
+    @include media-w($ssm) {
+      font-size: 14px;
+    }
+
+    @include media-w($xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__content-one {
+    max-width: 102px;
+  }
+
+  &__content-two {
+    max-width: 130px;
+  }
+
+  &__content-three {
+    max-width: 120px;
+  }
+
+  &__svg {
+    margin-top: auto;
+    fill: #BBA390;
+    z-index: 1;
+
+    &--shoulder-strap {
+      width: 110.56px;
+      height: 124.22px;
+      transform: rotate(0.02deg);
+
+      @include media-w($sms) {
+        width: 65.22px;
+        height: 77.97px;
+      }
+
+      @include media-w($xxsl) {
+        width: 103.22px;
+        height: 90.97px;
+        margin-left: 19px;
+      }
+    }
+
+    &--corona {
+      width: 117.04px;
+      height: 100.12px;
+      transform: rotate(-0.94deg);
+
+      @include media-w($sms) {
+        width: 71.31px;
+        height: 58.33px;
+      }
+
+      @include media-w($xxsl) {
+        width: 90.22px;
+        height: 70.97px;
+        margin-left: 14px;
+      }
+    }
+
+    &--cattalog {
+      width: 123.63px;
+      height: 90.44px;
+
+      @include media-w($sms) {
+        width: 93.1px;
+        height: 68.26px;
+      }
+
+      @include media-w($xxsl) {
+        width: 105.1px;
+        height: 72.26px;
+        margin-top: -9px;
+        margin-left: -5px;
+      }
+    }
+  }
+
+  &__condition {
+    position: relative;
+    display: block;
+    @extend %roboto-300;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 418px;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 90px;
+    color: $white;
+    transition: 0.5s;
+
+    @include media-w($sm) {
+      font-size: 18px;
+    }
+
+    @include media-w($smx) {
+      width: 355px;
+      font-size: 16px;
+    }
+
+    @include media-w($smm) {
+      width: 331px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        background-color: $accent;
+      }
+
+      &::after {
+        right: 20px;
+
+        @include media-w($xxsl) {
+          right: 50px;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      bottom: -1px;
+      width: 255px;
+      height: 1px;
+      background-color: #7E8895;
+      transition: 0.5s;
+
+      @include media-w($smx) {
+        width: 198px;
+      }
+
+      @include media-w($smm) {
+        width: 174px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 52%;
+      transform: translateY(-50%);
+      width: 66px;
+      height: 13px;
+      background-image: url(../images/design/arrow-right.png);
+      @extend %bg-center-cover;
+      transition: 0.5s;
+
+      @include media-w($smx) {
+        right: 72px;
+        width: 35.59px;
+        height: 6.88px;
+      }
+    }
+  }
+}

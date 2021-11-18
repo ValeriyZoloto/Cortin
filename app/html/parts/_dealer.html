@@ -14,7 +14,7 @@
             <use xlink:href="images/sprite.svg#player"></use>
           </svg>
           <p class="dealer__text dealer__text--player">
-            Телеграм канал, где мы <br>
+            <span>Телеграм канал, где мы</span>
             делимся опытом (новые изделия,
             акции, обучающий контент)
           </p>
@@ -61,8 +61,11 @@
       </li>
     </ul>
     <form class="dealer__form">
-      <input class="dealer__input" type="tel" required title="Введите телефон"
-        placeholder="Телефон" pattern="2[0-9]{3}-[0-9]{3}">
+      <label class="dealer__label">
+        <input class="dealer__input" type="tel" id="phone" required
+          title="Введите телефон" placeholder="Телефон">
+        <span class="dealer__enter">Введите телефон</span>
+      </label>
       <button class="btn dealer__btn" type="submit">Стать дилером</button>
     </form>
   </div>

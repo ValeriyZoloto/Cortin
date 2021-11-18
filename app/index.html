@@ -68,7 +68,7 @@
           изготовление штор
         </h2>
         <p class="production__text">
-          8 видов систем, более 1000 видов тканей,<br>
+          <span>8 видов систем, более 1000 видов тканей,</span>
           и множество дополнительных возможностей позволяют создать реально уникальную и
           уютную атмосферу в вашем доме
         </p>
@@ -165,7 +165,7 @@
             <use xlink:href="images/sprite.svg#player"></use>
           </svg>
           <p class="dealer__text dealer__text--player">
-            Телеграм канал, где мы <br>
+            <span>Телеграм канал, где мы</span>
             делимся опытом (новые изделия,
             акции, обучающий контент)
           </p>
@@ -212,12 +212,60 @@
       </li>
     </ul>
     <form class="dealer__form">
-      <input class="dealer__input" type="tel" required title="Введите телефон"
-        placeholder="Телефон" pattern="2[0-9]{3}-[0-9]{3}">
+      <label class="dealer__label">
+        <input class="dealer__input" type="tel" id="phone" required
+          title="Введите телефон" placeholder="Телефон">
+        <span class="dealer__enter">Введите телефон</span>
+      </label>
       <button class="btn dealer__btn" type="submit">Стать дилером</button>
     </form>
   </div>
 </section>
+<section class="design">
+  <div class="container">
+    <h2 class="title design__title">
+      <span>А ТАКЖЕ</span> ДЛЯ ДИЗАЙН СТУДИЙ
+    </h2>
+    <ul class="design__list">
+      <li class="design__item">
+        <a class="design__link design__link-one" href="#">
+          <p class="design__content design__content-one">
+            Регулярное
+            добавление
+            новинок
+          </p>
+          <svg class="design__svg design__svg--shoulder-strap">
+            <use xlink:href="images/sprite.svg#shoulder-strap"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="design__item">
+        <a class="design__link design__link-two" href="#">
+          <p class="design__content design__content-two">
+            Эксклюзивные
+            решения
+          </p>
+          <svg class="design__svg design__svg--corona">
+            <use xlink:href="images/sprite.svg#corona"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="design__item">
+        <a class="design__link design__link-three" href="#">
+          <p class="design__content design__content-three">
+            Современные
+            каталоги
+          </p>
+          <svg class="design__svg design__svg--cattalog">
+            <use xlink:href="images/sprite.svg#cattalog"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <a class="design__condition" href="#">Условия для дизайн студий</a>
+  </div>
+</section>
+
 
 </main>
 <footer class="footer">
@@ -345,7 +393,13 @@
     </div>
   </div>
 </footer>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/main.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#phone").mask("+7 (999) 999-9999");
+  });
+</script>
 </body>
 
 </html>

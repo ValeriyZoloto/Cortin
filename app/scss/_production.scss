@@ -545,6 +545,10 @@
     color: $text;
     margin-left: 3px;
 
+    & span {
+      display: block;
+    }
+
     @include media-w($lgv) {
       margin: 0 auto;
       text-align: center;

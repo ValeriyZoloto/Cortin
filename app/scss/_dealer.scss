@@ -2,7 +2,7 @@
   padding: 45px 0px 110px 0px;
 
   @include media-w($snm) {
-    padding: 15px 0px 110px 0px;
+    padding: 15px 0px 0px 0px;
   }
 
   &__title {
@@ -145,6 +145,7 @@
 
       .dealer__text {
         color: $accent;
+
       }
     }
   }
@@ -211,6 +212,10 @@
     line-height: 1.75;
     text-align: center;
     color: $text;
+
+    & span {
+      display: block;
+    }
 
     @include media-w($sm) {
       text-align: left;
@@ -286,8 +291,31 @@
     }
   }
 
+  &__label {
+    position: relative;
+  }
+
+  &__enter {
+    position: absolute;
+    width: 97px;
+    @extend %roboto-400;
+    font-size: 12px;
+    line-height: 30px;
+    color: $red-light-1;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+
+
   &__input {
-    padding: 0px 21px;
+    padding: 0px 120px 0px 21px;
     width: 295px;
     height: 59px;
     border: 1px solid $line;
