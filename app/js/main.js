@@ -9,15 +9,19 @@ $(function () {
 		}
 	});
 
-	//input
-	$(".dealer__btn").on("click", function () {
-		var re = /^\d[\d\(\)\ -]{4,14}\d$/;
-		var myPhone = document.getElementById("phone").value;
-		var valid = re.test(myPhone);
-		if (valid) output = "Номер телефона введен правильно!";
-		else output = "Номер телефона введен неправильно!";
-		document.getElementById("message").innerHTML =
-			document.getElementById("message").innerHTML + "<br />" + output;
-		return valid;
+	scroll;
+	$(".scroll").click(function (event) {
+		console.log(11111);
+		event.preventDefault();
+		$("body").animate({ scrollTop: 0 }, 1500);
 	});
+
+	$(".menu a, header a").on("click", function (e) {
+		e.preventDefault();
+		const id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 1500);
+	});
+
+	//input
 });

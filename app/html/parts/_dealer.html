@@ -1,4 +1,4 @@
-<section class="dealer">
+<section class="dealer" id="dealer">
   <div class="container">
     <h2 class="title dealer__title">
       ПРЕДЛАГАЕМ УДОБНЫЕ
@@ -60,13 +60,16 @@
         </a>
       </li>
     </ul>
-    <form class="dealer__form">
+    <form class="dealer__form" id="dealer__form">
       <label class="dealer__label">
-        <input class="dealer__input" type="tel" id="phone" required
-          title="Введите телефон" placeholder="Телефон">
-        <span class="dealer__enter">Введите телефон</span>
+
+        <input class="dealer__input" type="tel" id="phone" name="phone"
+          placeholder="Телефон"
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18"
+          maxlength="18" />
+        <span class="dealer__enter" id="message">Введите телефон</span>
       </label>
-      <button class="btn dealer__btn" type="submit">Стать дилером</button>
+      <button class="btn dealer__btn" type="submit" ValidPhone();>Стать дилером</button>
     </form>
   </div>
 </section>

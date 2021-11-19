@@ -200,3 +200,57 @@ body {
     @extend %btn-active;
   }
 }
+
+.scroll {
+  position: fixed;
+  right: 266px;
+  bottom: 261px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 9;
+  transition: 0.5s;
+
+  &:hover {
+    .scroll__svg {
+      width: 55px;
+      height: 70px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px 2px $accent;
+    }
+  }
+
+  @include media-w($xxl) {
+    right: 49px;
+    bottom: 163px;
+  }
+
+  @include media-w($sm) {
+    right: 25px;
+    bottom: 134px;
+  }
+
+  @include media-w($smz) {
+    right: -30px;
+    bottom: 109px;
+  }
+
+  &__svg {
+    width: 50px;
+    height: 50px;
+    fill: $accent;
+    transition: 0.5s;
+
+    @include media-w($sm) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include media-w($smz) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

@@ -16,6 +16,7 @@ $bg-light-2:#203B5A;
 $bg-light-3:#18304D;
 $bg-light-4:#5B82A9;
 $bg:#12253B;
+$bg-dark:#122E4A;
 $line:#385980;
 $accent-hover:#57A5FF;
 $accent-active:#207EEA;
@@ -152,8 +153,9 @@ $xxsl: 330px;
 /*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
 /*::::::::::::::::::::::::::наследование для кнопки:::::::::::::::::::::::::::::*/
 %btn {
-  width: 230px;
-  height: 58px;
+  width: 229px;
+  height: 57px;
+  border: 1px solid transparent;
   padding: 13px 5px 15px 5px;
   background-color: $accent;
   @extend %roboto-700;
@@ -163,28 +165,18 @@ $xxsl: 330px;
   border: 1px solid transparent;
   transition: 0.5s;
 
-  //   @include media-w($md) {
-  //     width: 206px;
-  //     height: 59px;
-  //     font-size: 16px;
-  //     padding: 20px 5px;
-  //   }
-
-  //   @include media-w($mdl) {
-  //     width: 177px;
-  //     height: 50px;
-  //     font-size: 14px;
-  //     padding: 16px 5px;
-  //   }
 }
 
 %btn-focus {
-  box-shadow: 10px 10px 10px 10px $text;
+  background-color: $bg-light-3;
+  box-shadow: 3px 3px 3px 3px $accent;
 }
 
 %btn-hover {
-  background-color: $accent-hover;
-  color: $white;
+  background-color: $bg-light-3;
+  color: $accent;
+  border: 1px solid $accent-hover;
+  border-radius: 5px;
 }
 
 %btn-active {

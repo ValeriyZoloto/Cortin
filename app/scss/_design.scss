@@ -2,15 +2,15 @@
   padding: 110px 0px 107px 0px;
 
   @include media-w($mdl) {
-    padding: 90px 0px 107px 0px;
+    padding: 90px 0px 20px 0px;
   }
 
   @include media-w($smx) {
-    padding: 80px 0px 107px 0px;
+    padding: 80px 0px 20px 0px;
   }
 
   @include media-w($xs) {
-    padding: 67px 0px 107px 0px;
+    padding: 67px 0px 20px 0px;
   }
 
   &__title {
@@ -122,15 +122,22 @@
       }
 
       .design__content {
+        padding: 10px;
+        font-size: 14px;
         color: $accent;
         border-radius: 10px;
         box-shadow: 3px 3px 3px 3px $accent;
+
+        @include media-w($xxsl) {
+          font-size: 10px;
+        }
       }
     }
   }
 
   &__link-one {
     padding: 34px 26px 15px 43px;
+    transition: 0.5s;
 
     @include media-w($sms) {
       flex-direction: column;
@@ -144,6 +151,7 @@
 
   &__link-two {
     padding: 34px 23px 25px 42px;
+    transition: 0.5s;
 
     @include media-w($sms) {
       flex-direction: column;
@@ -157,6 +165,7 @@
 
   &__link-three {
     padding: 34px 31px 26px 41px;
+    transition: 0.5s;
 
     @include media-w($sms) {
       padding: 47px 24px 22px 49px;
@@ -174,6 +183,7 @@
     line-height: 1.33;
     color: $text;
     margin-bottom: auto;
+    transition: 0.5s;
 
     @include media-w($sms) {
       font-size: 16px;
@@ -205,6 +215,7 @@
     margin-top: auto;
     fill: #BBA390;
     z-index: 1;
+    transition: 0.5s;
 
     &--shoulder-strap {
       width: 110.56px;

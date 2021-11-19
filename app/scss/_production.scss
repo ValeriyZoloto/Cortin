@@ -183,6 +183,21 @@
 
   &__link {
     display: block;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+
+      .production__item-link {
+        &:hover {
+          color: $bg-light-hover;
+
+          &::after {
+            right: -5px;
+          }
+        }
+      }
+    }
 
     &:first-child {
       margin-bottom: 12px;
@@ -207,6 +222,10 @@
 
     &:hover {
       color: $bg-light-hover;
+
+      &::after {
+        right: -5px;
+      }
     }
 
     @include media-w($smz) {
@@ -249,6 +268,7 @@
       transform: translateY(-50%);
       background-image: url(../images/productions/arrow-right.png);
       @extend %bg-center-cover;
+      transition: 0.5s;
 
       @include media-w($smz) {
         width: 23px;

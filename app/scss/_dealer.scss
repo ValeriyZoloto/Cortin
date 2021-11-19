@@ -143,9 +143,13 @@
       border-radius: 20px;
       box-shadow: 10px 10px 10px 10px $accent;
 
+      .dealer__svg--player,
+      .dealer__svg--proffy {
+        fill: $accent;
+      }
+
       .dealer__text {
         color: $accent;
-
       }
     }
   }

@@ -1,0 +1,264 @@
+.sale {
+  padding: 107px 0px 160px 0px;
+
+  @include media-w($sm) {
+    padding: 45px 0px 73px 0px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 870px;
+
+    @include media-w($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 368px;
+
+    @include media-w($sm) {
+      max-width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    @include media-w($sms) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__cards {
+    max-width: 403px;
+    width: 100%;
+
+    @include media-w($sm) {
+      max-width: 70%;
+    }
+
+    @include media-w($sms) {
+      display: none;
+    }
+  }
+
+  &__cards-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 14px;
+  }
+
+  &__cards-item {
+    transition: 0.5s;
+
+    &:hover {
+      border: 1px solid $accent;
+    }
+
+    &:first-child {
+      padding: 68px 40px 69px 39px;
+      border: 1px solid transparent;
+      width: 229px;
+      height: 229px;
+      background-color: $bg-dark;
+      box-shadow: 12px 22px 42px rgba(4, 20, 37, 0.25);
+      border-radius: 0px 30px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        border: 1px solid $accent;
+        box-shadow: 5px 5px 5px 5px $accent;
+
+        .sale__logo-black {
+          fill: $accent;
+        }
+
+        .sale__cards-text {
+          color: $accent;
+        }
+      }
+
+      .sale__cards-text {
+        margin: 0 auto;
+        max-width: 117px;
+        font-size: 14px;
+        line-height: 1.43;
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 46px 21px 47px 24px;
+      width: 158px;
+      height: 158px;
+      border: 1px solid transparent;
+      background-color: $bg-dark;
+      box-shadow: 12px 22px 42px rgba(4, 20, 37, 0.25);
+      border-radius: 30px 0px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        border: 1px solid $accent;
+        box-shadow: 3px 3px 3px 3px $accent;
+
+        .sale__logo-red {
+          fill: $accent;
+        }
+
+        .sale__cards-text {
+          color: $accent;
+        }
+      }
+
+      .sale__cards-text {
+        margin: 0 auto;
+        max-width: 112px;
+        font-size: 10px;
+        line-height: 1.4;
+        text-align: center;
+      }
+    }
+  }
+
+  &__cards-text {
+    @extend %roboto-400;
+    color: #6485A7;
+  }
+
+  &__cards-logo {
+    transition: 0.5s;
+
+    &:hover {
+
+      .sale__logo-black,
+      .sale__logo-red {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__logo-black {
+    width: 150px;
+    height: 40px;
+    fill: #FF7A44;
+    margin-bottom: 12px;
+  }
+
+  &__logo-red {
+    width: 103px;
+    height: 31px;
+    fill: #FE8A90;
+    margin-bottom: 1px;
+  }
+
+  &__title {
+    @extend %futuraPT-500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    color: $white;
+    margin-bottom: 12px;
+    margin-top: 10px;
+
+    @include media-w($sm) {
+      margin: 0px auto 12px auto;
+      max-width: 333px;
+      font-size: 36px;
+      line-height: 1.25;
+    }
+
+    @include media-w($sms) {
+      max-width: 300px;
+      font-size: 30px;
+    }
+
+    @include media-w($xs) {
+      max-width: 250px;
+      font-size: 24px;
+    }
+
+  }
+
+  &__text {
+    max-width: 226px;
+    @extend %roboto-300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $text;
+    margin-bottom: 49px;
+
+    @include media-w($sm) {
+      max-width: 100%;
+    }
+
+    @include media-w($xxsl) {
+      max-width: 170px;
+      font-size: 12px;
+      line-height: 1.67;
+      margin: 0px auto 24px auto;
+    }
+  }
+
+  &__btn {
+    width: 215px;
+    height: 59px;
+
+    @include media-w($xxsl) {
+      padding: 8px 5px;
+      width: 172.4px;
+      height: 46px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  &__bottom-list {
+    margin-right: 23px;
+    margin-left: auto;
+    width: 100%;
+    max-width: 246px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__bottom-item {
+    display: flex;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    width: 71.71px;
+    height: 71.73px;
+    background-color: #122E4A;
+    box-shadow: 12px 22px 42px rgba(4, 20, 37, 0.25);
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 2px 2px 2px 2px $accent;
+      border: 1px solid $accent;
+      border-radius: 5px;
+
+      .sale__bottom-svg {
+        fill: $accent;
+      }
+    }
+
+    &:last-child {
+      margin: 0 auto;
+      margin-top: 14px;
+    }
+  }
+
+  &__bottom-svg {
+    width: 42px;
+    height: 11px;
+    fill: #314961;
+  }
+}

@@ -100,6 +100,10 @@
     color: $white;
     transition: 0.5s;
 
+    &:hover {
+      color: $accent;
+    }
+
     &::after {
       display: block;
       content: '';
@@ -107,13 +111,13 @@
       left: 0px;
       width: 0px;
       height: 2px;
-      background-color: $white;
+      background-color: $accent;
       transition: width 0.5s;
     }
 
     &:hover::after,
     &:focus::after {
-      color: $white;
+      color: $accent;
       width: 100%;
     }
   }
@@ -133,13 +137,13 @@
       left: 0px;
       width: 0px;
       height: 2px;
-      background-color: $white;
+      background-color: $accent;
       transition: width 0.5s;
     }
 
     &:hover::after,
     &:focus::after {
-      color: $white;
+      color: $accent;
       width: 100%;
     }
   }
@@ -254,6 +258,11 @@
     line-height: 1.2;
     color: $white;
     margin-bottom: 16px;
+    transition: 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
 
     @include media-w($xs) {
       font-size: 16px;
@@ -266,8 +275,8 @@
       left: 0px;
       width: 0px;
       height: 2px;
-      background-color: $white;
-      transition: width 0.5s;
+      background-color: $accent;
+      transition: 0.5s;
     }
 
     &:hover::after,
@@ -284,6 +293,11 @@
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 14px;
+    transition: 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
 
     @include media-w($xs) {
       max-width: 200px;
@@ -296,8 +310,8 @@
       left: 0px;
       width: 0px;
       height: 2px;
-      background-color: $white;
-      transition: width 0.5s;
+      background-color: $accent;
+      transition: 0.5s;
     }
 
     &:hover::after,
@@ -383,7 +397,7 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      fill: $white;
     }
   }
 
@@ -393,7 +407,10 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      padding: 2px;
+      fill: $white;
+      border-radius: 5px;
+      background-color: $accent;
     }
   }
 
@@ -403,7 +420,10 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      padding: 2px;
+      fill: $white;
+      border-radius: 5px;
+      background-color: $accent;
     }
   }
 
@@ -413,7 +433,10 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      padding: 2px;
+      fill: $white;
+      border-radius: 5px;
+      background-color: $accent;
     }
   }
 
@@ -423,7 +446,10 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      padding: 2px;
+      fill: $white;
+      border-radius: 5px;
+      background-color: $accent;
     }
   }
 
@@ -433,7 +459,10 @@
     transition: 0.5s;
 
     &:hover {
-      fill: $title;
+      padding: 2px;
+      fill: $white;
+      border-radius: 5px;
+      background-color: $accent;
     }
   }
 

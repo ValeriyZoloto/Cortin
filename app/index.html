@@ -42,16 +42,16 @@
         </button>
         <ul class="menu header__menu">
           <li class="menu__item">
-            <a class="menu__link" href="#">Где купить?</a>
+            <a class="menu__link" href="#sale">Где купить?</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Дилерам</a>
+            <a class="menu__link" href="#dealer">Дилерам</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Дизайн студиям</a>
+            <a class="menu__link" href="#design">Дизайн студиям</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Контакты</a>
+            <a class="menu__link" href="#dealer__form">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -59,7 +59,7 @@
   </header>
 
   <main class="main">
-<section class="production">
+<section class="production" id="production">
   <div class="container">
     <ul class="production__inner-upper">
       <li class="production__item">
@@ -149,7 +149,7 @@
     </ul>
   </div>
 </section>
-<section class="dealer">
+<section class="dealer" id="dealer">
   <div class="container">
     <h2 class="title dealer__title">
       ПРЕДЛАГАЕМ УДОБНЫЕ
@@ -211,17 +211,20 @@
         </a>
       </li>
     </ul>
-    <form class="dealer__form">
+    <form class="dealer__form" id="dealer__form">
       <label class="dealer__label">
-        <input class="dealer__input" type="tel" id="phone" required
-          title="Введите телефон" placeholder="Телефон">
-        <span class="dealer__enter">Введите телефон</span>
+
+        <input class="dealer__input" type="tel" id="phone" name="phone"
+          placeholder="Телефон"
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18"
+          maxlength="18" />
+        <span class="dealer__enter" id="message">Введите телефон</span>
       </label>
-      <button class="btn dealer__btn" type="submit">Стать дилером</button>
+      <button class="btn dealer__btn" type="submit" ValidPhone();>Стать дилером</button>
     </form>
   </div>
 </section>
-<section class="design">
+<section class="design" id="design">
   <div class="container">
     <h2 class="title design__title">
       <span>А ТАКЖЕ</span> ДЛЯ ДИЗАЙН СТУДИЙ
@@ -263,6 +266,81 @@
       </li>
     </ul>
     <a class="design__condition" href="#">Условия для дизайн студий</a>
+  </div>
+</section>
+<section class="sale" id="sale">
+  <div class="container">
+    <div class="sale__inner">
+      <div class="sale__content">
+        <h2 class="title sale__title">
+          КУПИТЬ НАШИ
+          ИЗДЕЛИЯ МОЖНО
+        </h2>
+        <p class="sale__text">
+          В магазинах нашей дилерской
+          сети в вашем городе
+        </p>
+        <button class="btn sale__btn" type="button">Найти магазин</button>
+      </div>
+
+      <div class="sale__cards">
+        <ul class="sale__cards-list">
+          <li class="sale__cards-item">
+            <a class="sale__cards-logo" href="#">
+              <svg class="sale__logo-black">
+                <use xlink:href="images/sprite.svg#logo-black"></use>
+              </svg>
+            </a>
+            <p class="sale__cards-text">
+              Солнцезащитные
+              системы
+            </p>
+          </li>
+          <li class="sale__cards-item">
+            <a class="sale__cards-logo" href="#">
+              <svg class="sale__logo-red">
+                <use xlink:href="images/sprite.svg#logo-red"></use>
+              </svg>
+            </a>
+            <p class="sale__cards-text">
+              Интернет-магазин
+              жалюзт рулонных штор
+            </p>
+
+          </li>
+        </ul>
+        <ul class="sale__bottom-list">
+          <li class="sale__bottom-item">
+            <a class="sale__bottom-link" href="#">
+              <svg class="sale__bottom-svg">
+                <use xlink:href="images/sprite.svg#logo-litle"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sale__bottom-item">
+            <a class="sale__bottom-link" href="#">
+              <svg class="sale__bottom-svg">
+                <use xlink:href="images/sprite.svg#logo-litle"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sale__bottom-item">
+            <a class="sale__bottom-link" href="#">
+              <svg class="sale__bottom-svg">
+                <use xlink:href="images/sprite.svg#logo-litle"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sale__bottom-item">
+            <a class="sale__bottom-link" href="#">
+              <svg class="sale__bottom-svg">
+                <use xlink:href="images/sprite.svg#logo-litle"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -393,13 +471,13 @@
     </div>
   </div>
 </footer>
-<script src="js/jquery.maskedinput.min.js"></script>
+<a class="scroll" id="scroll" href="#header">
+  <span class="sr-only">Для поднятия к шапке сайта</span>
+  <svg class="scroll__svg">
+    <use xlink:href="images/sprite.svg#scroll"></use>
+  </svg>
+</a>
 <script src="js/main.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $("#phone").mask("+7 (999) 999-9999");
-  });
-</script>
 </body>
 
 </html>
