@@ -15,6 +15,10 @@
     padding: 60px 40px 0px 40px;
     background-color: $bg-light-1;
 
+    &--white {
+      background-color: #314961;
+    }
+
     @include media-w($lgv) {
       padding: 56px 107px 51px 65px;
       display: flex;
@@ -172,6 +176,10 @@
     padding: 61px 40px 0px 99px;
     background-color: $bg-light-2;
 
+    &--white {
+      background-color: #DFE7EF;
+    }
+
     @include media-w($lgv) {
       height: auto;
       padding: 40px 40px 0px 40px;
@@ -222,10 +230,26 @@
     }
   }
 
+  &__dealers-link--white {
+    color: #314961;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &::after {
+      background-color: $accent;
+    }
+  }
+
   &__contacts {
     width: 100%;
     background-color: $bg-light-3;
     padding: 61px 35px 0px 94px;
+
+    &--white {
+      background-color: #F4F7FA;
+    }
 
     @include media-w($lgv) {
       padding: 61px 40px 41px 40px;
@@ -259,6 +283,10 @@
     color: $white;
     margin-bottom: 16px;
     transition: 0.5s;
+
+    &--white {
+      color: #314961;
+    }
 
     &:hover {
       color: $accent;
@@ -329,6 +357,10 @@
     font-size: 14px;
     line-height: 1.1;
     margin-bottom: 27px;
+
+    &--white {
+      color: #314961;
+    }
   }
 
   &__socials {
@@ -398,6 +430,16 @@
 
     &:hover {
       fill: $white;
+    }
+
+
+  }
+
+  .socials__svg--white {
+    fill: $white;
+
+    &:hover {
+      fill: $bg-light-3;
     }
   }
 

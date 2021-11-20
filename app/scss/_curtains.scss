@@ -1,0 +1,176 @@
+.curtains {
+  position: relative;
+  padding: 103px 0 207px 0;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 594px;
+    height: 857px;
+    right: 0px;
+    top: 0px;
+    background-image: url(../images/curtains/curtains-bg.png);
+    @extend %bg-center-cover;
+    z-index: 1;
+
+    @include media-w($mdb) {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 419px;
+    background-image: url(../images/curtains/curtains-bg-mobile.png);
+    @extend %bg-center-cover;
+    z-index: -1;
+    display: none;
+
+    @include media-w($mdb) {
+      display: block;
+    }
+  }
+
+  &__content {
+    max-width: 480px;
+
+    @include media-w($mdb) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__page-title {
+    margin-left: -5px;
+    max-width: 314px;
+    margin-bottom: 14px;
+
+    @include media-w($mdb) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    max-width: 330px;
+    @extend %roboto-300;
+    font-size: 22px;
+    line-height: 1.36;
+    color: $page-text;
+    margin-bottom: 56px;
+
+    @include media-w($mdb) {
+      margin: 0px auto 56px auto;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 457px;
+    margin-bottom: 83px;
+
+    @include media-w($mdb) {
+      width: 100%;
+      margin: 0px auto 83px auto;
+    }
+  }
+
+  &__btn {
+    padding: 6px 5px 10px 5px;
+    width: 206.71px;
+    height: 66.2px;
+    @extend %futuraPT-700;
+    line-height: 2.5;
+  }
+
+  &__btn-white {
+    padding: 6px 5px 10px 5px;
+    width: 234.23px;
+    height: 66.2px;
+    background-color: $white;
+    border: 1px solid $white-btn-border;
+    @extend %roboto-300;
+    font-size: 20px;
+    line-height: 2.5;
+    color: $white-btn-text;
+    transition: 0.5s;
+
+    &:focus {
+      box-shadow: 2px 2px 2px 2px $white-btn-text;
+      @extend %roboto-700;
+    }
+
+    &:hover {
+      background-color: $accent;
+      color: $white;
+    }
+
+    &:active {
+      @extend %roboto-700;
+      background-color: $accent;
+      color: $white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 473px;
+
+    @include media-w($mdb) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {}
+
+  &__link {
+    display: block;
+    text-align: center;
+  }
+
+  &__svg {
+    fill: #CCDAEA;
+
+    &--day {
+      width: 42.99px;
+      height: 43.87px;
+      margin-bottom: 11px;
+    }
+
+    &--auto {
+      width: 24.7px;
+      height: 48.4px;
+      margin-bottom: 7px;
+    }
+
+    &--edging {
+      width: 41px;
+      height: 41.85px;
+      margin-bottom: 14px;
+    }
+
+    &--oblique {
+      width: 50px;
+      height: 44px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__short {
+    display: block;
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $page-text;
+    text-align: center;
+  }
+}
