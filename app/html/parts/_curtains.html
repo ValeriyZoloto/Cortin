@@ -12,43 +12,97 @@
       <div class="curtains__buttons">
         <button class="btn curtains__btn" type="button">Хочу заказать</button>
         <label class="curtains__buttons-label">
-          <button class="curtains__btn-white" type="button">Хочу стать дилером</button>
+          <button class="curtains__btn-white curtains__btn-white--open" type="button">
+            Хочу стать
+            дилером
+          </button>
+
+          <button class="curtains__btn-white curtains__btn-white--hide" type="button">
+            Стать
+            дилером
+          </button>
         </label>
       </div>
-      <ul class="curtains__list">
-        <li class="curtains__item">
-          <a class="curtains__link" href="#">
-            <svg class="curtains__svg curtains__svg--day">
-              <use xlink:href="images/sprite.svg#day"></use>
-            </svg>
-            <span class="curtains__short">День-ночь</span>
-          </a>
-        </li>
-        <li class="curtains__item">
-          <a class="curtains__link" href="#">
-            <svg class="curtains__svg curtains__svg--auto">
-              <use xlink:href="images/sprite.svg#auto"></use>
-            </svg>
-            <span class="curtains__short">С автоматикой</span>
-          </a>
-        </li>
-        <li class="curtains__item">
-          <a class="curtains__link" href="#">
-            <svg class="curtains__svg curtains__svg--edging">
-              <use xlink:href="images/sprite.svg#edging"></use>
-            </svg>
-            <span class="curtains__short">С окантовкой</span>
-          </a>
-        </li>
-        <li class="curtains__item">
-          <a class="curtains__link" href="#">
-            <svg class="curtains__svg curtains__svg--oblique">
-              <use xlink:href="images/sprite.svg#oblique"></use>
-            </svg>
-            <span class="curtains__short">На косое окно</span>
-          </a>
-        </li>
-      </ul>
+      <div class="curtains__wrapper">
+        <ul class="curtains__list">
+          <li class="curtains__item">
+            <a class="curtains__link" href="#">
+              <svg class="curtains__svg curtains__svg--day">
+                <use xlink:href="images/sprite.svg#day"></use>
+              </svg>
+              <span class="curtains__short">День-ночь</span>
+            </a>
+          </li>
+          <li class="curtains__item">
+            <a class="curtains__link" href="#">
+              <svg class="curtains__svg curtains__svg--auto">
+                <use xlink:href="images/sprite.svg#auto"></use>
+              </svg>
+              <span class="curtains__short">С автоматикой</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="curtains__list">
+          <li class="curtains__item">
+            <a class="curtains__link" href="#">
+              <svg class="curtains__svg curtains__svg--edging">
+                <use xlink:href="images/sprite.svg#edging"></use>
+              </svg>
+              <span class="curtains__short">С окантовкой</span>
+            </a>
+          </li>
+          <li class="curtains__item">
+            <a class="curtains__link" href="#">
+              <svg class="curtains__svg curtains__svg--oblique">
+                <use xlink:href="images/sprite.svg#oblique"></use>
+              </svg>
+              <span class="curtains__short">На косое окно</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <ul class="curtains__casement">
+      <li class="curtains__casement-item">
+        <a class="curtains__casement-link" href="#">
+          <picture class="curtains__picture">
+            <source srcset="images/curtains/casement/1.webp" type="image/webp">
+            <source srcset="images/curtains/casement/1.jpg" type="image/jpg">
+            <img class="curtains__img curtains__img--one"
+              src="images/curtains/casement/1.webp" alt="крепление на окно">
+          </picture>
+          <h3 class="curtains__casement-title">
+            НА ОКНО
+          </h3>
+        </a>
+      </li>
+      <li class="curtains__casement-item">
+        <a class="curtains__casement-link" href="#">
+          <h3 class="curtains__casement-title curtains__casement-title--two">
+            НА ПРОЁМ
+          </h3>
+          <picture class="curtains__picture">
+            <source srcset="images/curtains/casement/2.webp" type="image/webp">
+            <source srcset="images/curtains/casement/2.jpg" type="image/jpg">
+            <img class="curtains__img curtains__img--two"
+              src="images/curtains/casement/2.webp" alt="крепление на проем">
+          </picture>
+        </a>
+      </li>
+      <li class="curtains__casement-item">
+        <a class="curtains__casement-link" href="#">
+          <picture class="curtains__picture">
+            <source srcset="images/curtains/casement/3.webp" type="image/webp">
+            <source srcset="images/curtains/casement/3.jpg" type="image/jpg">
+            <img class="curtains__img curtains__img--three"
+              src="images/curtains/casement/3.webp" alt="крепление на окно">
+          </picture>
+          <h3 class="curtains__casement-title">
+            НА СТЕНУ,
+            В ПРОЁМ
+          </h3>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>

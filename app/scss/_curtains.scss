@@ -1,6 +1,10 @@
 .curtains {
   position: relative;
-  padding: 103px 0 207px 0;
+  padding: 103px 0px 207px 0px;
+
+  @include media-w($smm) {
+    padding: 56px 0px 207px 0px;
+  }
 
   &::after {
     position: absolute;
@@ -30,23 +34,78 @@
     z-index: -1;
     display: none;
 
-    @include media-w($mdb) {
+    @include media-w($smx) {
       display: block;
+      width: 100%;
+      height: 1326px;
     }
 
-    @include media-w($smx) {
-      width: 100%;
-      height: 1030px;
+    @include media-w($smz) {
+      height: 1195px;
+    }
+
+    @include media-w($sms) {
+      height: 1067px;
+    }
+
+    @include media-w($ssm) {
+      height: 961px;
+    }
+
+    @include media-w($snm) {
+      height: 866px;
+    }
+
+    @include media-w($smm) {
+      height: 856px;
+    }
+
+    @include media-w($xss) {
+      height: 813px;
+    }
+
+    @include media-w($xs) {
+      height: 769px;
+    }
+
+    @include media-w($xxs) {
+      height: 687px;
+    }
+
+    @include media-w($xxl) {
+      height: 629px;
+    }
+
+    @include media-w($xxsl) {
+      height: 552px;
     }
   }
 
   &__content {
     max-width: 480px;
+    margin-bottom: 208px;
+
+    @include media-w($lgv) {
+      margin-bottom: 273px;
+    }
 
     @include media-w($mdb) {
+      margin-bottom: 120px;
       max-width: 100%;
       display: flex;
       flex-direction: column;
+    }
+
+    @include media-w($md) {
+      margin-bottom: 100px;
+    }
+
+    @include media-w($mdl) {
+      margin-bottom: 80px;
+    }
+
+    @include media-w($smx) {
+      margin-bottom: 63px;
     }
   }
 
@@ -88,6 +147,16 @@
       text-align: center;
     }
 
+    @include media-w($smm) {
+      font-size: 14px;
+    }
+
+    @include media-w($xxsl) {
+      margin: 0px auto 23px auto;
+      max-width: 180px;
+      font-size: 12px;
+    }
+
   }
 
   &__buttons {
@@ -103,9 +172,37 @@
     }
 
     @include media-w($smx) {
-      margin: 0px auto 700px auto;
+      margin: 0px auto 961px auto;
       flex-direction: column;
       align-items: center;
+    }
+
+    @include media-w($smz) {
+      margin: 0px auto 840px auto;
+    }
+
+    @include media-w($sms) {
+      margin: 0px auto 735px auto;
+    }
+
+    @include media-w($ssm) {
+      margin: 0px auto 635px auto;
+    }
+
+    @include media-w($snm) {
+      margin: 0px auto 524px auto;
+    }
+
+    @include media-w($xss) {
+      margin: 0px auto 475px auto;
+    }
+
+    @include media-w($xs) {
+      margin: 0px auto 435px auto;
+    }
+
+    @include media-w($xxs) {
+      margin: 0px auto 349px auto;
     }
   }
 
@@ -152,6 +249,23 @@
     color: $white-btn-text;
     transition: 0.5s;
 
+    &--hide {
+      display: none;
+
+      @include media-w($sms) {
+        margin-top: -11px;
+        font-size: 14px;
+        display: block;
+      }
+    }
+
+    &--open {
+      @include media-w($sms) {
+        font-size: 14px;
+        display: none;
+      }
+    }
+
     &:focus {
       box-shadow: 0px 5px 20px 0px rgb(146 146 146 / 30%);
       @extend %roboto-700;
@@ -185,15 +299,61 @@
     }
   }
 
-  &__list {
+  &__wrapper {
+    max-width: 473px;
     display: flex;
     justify-content: space-between;
-    max-width: 473px;
 
     @include media-w($mdb) {
       width: 100%;
       margin: 0 auto;
     }
+
+    @include media-w($smm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+    &:first-child {
+      max-width: 211px;
+      margin-left: -5px;
+
+      @include media-w($smm) {
+        max-width: 224px;
+        margin: 0px 0px 43px 0px;
+      }
+
+      @include media-w($xxsl) {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-left: 44px;
+      max-width: 224px;
+
+      @include media-w($xss) {
+        max-width: 224px;
+      }
+
+      @include media-w($mdb) {
+        margin: 0 auto;
+      }
+
+      @include media-w($xxsl) {
+        max-width: 100%;
+      }
+    }
+
+
 
     @include media-w($xs) {
       flex-wrap: wrap;
@@ -236,8 +396,8 @@
     }
 
     &--auto {
-      width: 24.7px;
-      height: 48.4px;
+      width: 33px;
+      height: 48px;
       margin-bottom: 7px;
     }
 
@@ -261,5 +421,144 @@
     line-height: 1.14;
     color: $page-text;
     text-align: center;
+
+    @include media-w($xxsl) {
+      font-size: 12px;
+    }
+  }
+
+  &__casement {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media-w($lgv) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      grid-template-rows: auto;
+      grid-gap: 20px;
+      justify-content: stretch;
+    }
+
+  }
+
+  &__casement-item {
+    &:first-child {
+      margin-bottom: 119px;
+
+      .curtains__casement-link {
+        @include media-w($lgv) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+
+      @include media-w($lgv) {
+        margin-bottom: 0px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin: -190px 0px 0px 101px;
+
+      @include media-w($lgv) {
+        margin: 0px 0px 0px 0px;
+      }
+
+      .curtains__casement-link {
+        @include media-w($lgv) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    &:last-child {
+      margin: 0px 0px 0px 103px;
+
+      .curtains__casement-link {
+        display: flex;
+        align-items: center;
+
+        @include media-w($lgv) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @include media-w($lgv) {
+        margin: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+  }
+
+  &__casement-link {}
+
+  &__img {
+    @include media-w($lgv) {
+      width: 100%;
+    }
+
+    &--one {
+      margin-bottom: 14px;
+    }
+
+    &--three {
+      margin-right: 36px;
+
+      @include media-w($lgv) {
+        margin-right: 0;
+        width: 1080px;
+      }
+    }
+  }
+
+  &__casement-title {
+    @extend %futuraPT-500;
+    font-size: 40px;
+    line-height: 51px;
+    letter-spacing: 0.1em;
+    color: $page-text;
+
+    &--two {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__casement-title {
+    max-width: 228px;
+
+    @include media-w($lgv) {
+      font-size: 36px;
+      line-height: 1.28;
+      max-width: 100%;
+    }
+
+    @include media-w($md) {
+      font-size: 30px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 26px;
+    }
+
+    @include media-w($smx) {
+      font-size: 20px;
+    }
+
+    @include media-w($sms) {
+      font-size: 18px;
+    }
+
+    @include media-w($xs) {
+      font-size: 16px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 14px;
+    }
   }
 }
