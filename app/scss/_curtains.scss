@@ -1,9 +1,13 @@
 .curtains {
   position: relative;
-  padding: 103px 0px 207px 0px;
+  padding: 103px 0px 167px 0px;
 
   @include media-w($smm) {
-    padding: 56px 0px 207px 0px;
+    padding: 56px 0px 167px 0px;
+  }
+
+  @include media-w($xs) {
+    padding: 56px 0px 37px 0px;
   }
 
   &::after {
@@ -106,6 +110,10 @@
 
     @include media-w($smx) {
       margin-bottom: 63px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: -2px;
     }
   }
 
@@ -444,6 +452,21 @@
   }
 
   &__casement-item {
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+
+      .curtains__casement-title {
+        box-shadow: 0px 5px 20px 0px rgb(146 146 146 / 30%);
+        color: $accent;
+
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
     &:first-child {
       margin-bottom: 119px;
 
@@ -457,13 +480,22 @@
       @include media-w($lgv) {
         margin-bottom: 0px;
       }
+
+      @include media-w($xs) {
+        margin-top: 13px;
+        margin-left: 4px;
+      }
     }
 
     &:nth-child(2) {
-      margin: -190px 0px 0px 101px;
+      margin: -202px 0px 0px 101px;
 
       @include media-w($lgv) {
         margin: 0px 0px 0px 0px;
+      }
+
+      @include media-w($xs) {
+        margin: 23px 0px 0px 0px;
       }
 
       .curtains__casement-link {
@@ -485,10 +517,14 @@
           flex-direction: column;
           align-items: flex-start;
         }
+
+        @include media-w($xs) {
+          margin-left: 4px;
+        }
       }
 
       @include media-w($lgv) {
-        margin: 0;
+        margin: -13px 0px 0px 0px;
         grid-column-start: 1;
         grid-column-end: 3;
       }
@@ -504,6 +540,16 @@
 
     &--one {
       margin-bottom: 14px;
+
+      @include media-w($xs) {
+        height: 199px;
+      }
+    }
+
+    &--two {
+      @include media-w($xs) {
+        height: 172px;
+      }
     }
 
     &--three {
@@ -512,6 +558,10 @@
       @include media-w($lgv) {
         margin-right: 0;
         width: 1080px;
+      }
+
+      @include media-w($xs) {
+        height: 157px;
       }
     }
   }
@@ -558,7 +608,35 @@
     }
 
     @include media-w($xxs) {
+      position: relative;
       font-size: 14px;
+      line-height: 2.7;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 6px;
+        background-image: url(../images/curtains/casement/arrow-right.png);
+      }
+
+      &--three {
+        @include media-w($xxs) {
+          &::after {
+            content: '';
+            position: absolute;
+            right: -34px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 6px;
+            background-image: url(../images/curtains/casement/arrow-right.png);
+          }
+        }
+      }
     }
   }
 }
