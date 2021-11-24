@@ -1,0 +1,333 @@
+.edging {
+  padding: 30px 0 70px 0;
+
+  @include media-w($sms) {
+    padding: 30px 0 370px 0;
+  }
+
+  @include media-w($xxsl) {
+    padding: 17px 0 370px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 35px;
+    margin-bottom: 133px;
+
+    @include media-w($mdb) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+
+      .edging__item-link {
+        opacity: 1;
+        color: $accent;
+      }
+    }
+
+    &:first-child {
+      padding-top: 40px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: 100%;
+
+      @include media-w($mdb) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__title {
+    @extend %futuraPT-500;
+    font-size: 52px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    color: $page-text;
+
+    @include media-w($mdb) {
+      font-size: 42px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 32px;
+    }
+
+    @include media-w($xxl) {
+      font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    @extend %roboto-400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #666666;
+
+    @include media-w($mdb) {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    @include media-w($smx) {
+      font-size: 16px;
+    }
+
+    @include media-w($xs) {
+      font-size: 14px;
+    }
+
+    @include media-w($xxl) {
+      font-size: 12px;
+    }
+
+    @include media-w($xxsl) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    & span {
+      color: $accent;
+    }
+  }
+
+  &__item-img {
+    @include media-w($mdb) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__item-link {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $page-text;
+    opacity: 0.8;
+    color: $white;
+    padding: 5px;
+    @extend %futuraPT-500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+
+    @include media-w($xxsl) {
+      font-size: 10px;
+    }
+
+    &--jester {
+      width: 94.27px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 54.78px;
+        height: 22.05px;
+      }
+    }
+
+    &--ches {
+      width: 63.97px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 37.44px;
+        height: 22.05px;
+      }
+    }
+
+    &--hiway {
+      width: 88.4px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 52.19px;
+        height: 22.05px;
+      }
+    }
+
+    &--luvers {
+      width: 101.58px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 60.48px;
+        height: 22.05px;
+      }
+    }
+
+    &--cing {
+      width: 64.29px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 37.52px;
+        height: 22.05px;
+      }
+    }
+
+    &--horizon {
+      width: 108.58px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 63.7px;
+        height: 22.05px;
+      }
+    }
+
+    &--victoria {
+      width: 105.1px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 63.1px;
+        height: 22.05px;
+      }
+    }
+
+    &--strim {
+      width: 116.12px;
+      height: 31.75px;
+
+      @include media-w($xxsl) {
+        width: 68.5px;
+        height: 22.05px;
+      }
+    }
+  }
+
+  &__day {
+    position: relative;
+    height: 849px;
+    margin-left: -54px;
+
+    @include media-w($sms) {
+      margin-left: 0px;
+      margin-right: -300px;
+      height: auto;
+    }
+  }
+
+  &__day-img {
+    @include media-w($mdb) {
+      height: auto;
+      width: 100%;
+    }
+
+    @include media-w($sms) {
+      width: 70%;
+    }
+  }
+
+  &__day-box {
+    padding: 84px 67px 135px 76px;
+    position: absolute;
+    top: 139px;
+    right: 4%;
+    width: 491px;
+    height: 549px;
+    background-color: #F7F8F9;
+    box-shadow: 22px 28px 62px rgba(18, 37, 59, 0.14);
+
+    @include media-w($mdl) {
+      padding: 79px 57px 115px 65px;
+      width: 471px;
+      height: 529px;
+    }
+
+    @include media-w($smx) {
+      padding: 59px 37px 85px 45px;
+      width: 451px;
+      height: 509px;
+    }
+
+    @include media-w($sms) {
+      padding: 0px;
+      // transform: rotate(-90deg);
+      width: 100%;
+      height: auto;
+      // top: -7%;
+      // left: -402px;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    @include media-w($ssm) {
+      // left: -368px;
+    }
+
+    @include media-w($smm) {
+      // left: -345px;
+    }
+
+    @include media-w($xs) {
+      // left: -329px;
+      // top: -2%;
+    }
+
+  }
+
+  &__day-svg {
+    width: 87px;
+    height: 40px;
+    margin-bottom: 5px;
+
+    @include media-w($sms) {
+      display: none;
+    }
+  }
+
+  &__day-title {
+    display: block;
+    @extend %futuraPT-500;
+    font-size: 60px;
+    line-height: 1.28;
+    color: $yellow;
+    letter-spacing: 0.04em;
+    margin-bottom: 11px;
+
+    & span {
+      color: $page-text;
+    }
+
+    @include media-w($sms) {
+      position: absolute;
+      top: 95px;
+      left: -110px;
+      transform: rotate(-90deg);
+    }
+
+
+  }
+
+  &__day-text {
+    @extend %roboto-400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+
+    & span {
+      color: $accent;
+    }
+
+    @include media-w($sms) {
+      position: absolute;
+      width: 400px;
+      left: 35%;
+      transform: translateX(-50%);
+      bottom: -700px;
+    }
+  }
+}

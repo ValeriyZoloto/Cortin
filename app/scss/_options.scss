@@ -1,9 +1,13 @@
 .options {
-  padding: 146px 0px 174px 0px;
+  padding: 146px 0px 144px 0px;
   background: linear-gradient(180deg, #F3F7FE 0%, rgba(249, 251, 255, 0) 100%);
 
   @include media-w($smx) {
     padding: 52px 0px 59px 0px;
+  }
+
+  @include media-w($xxsl) {
+    padding: 52px 0px 0px 0px;
   }
 
   &__title {
@@ -202,6 +206,10 @@
     @include media-w($mdb) {
       flex-direction: row-reverse;
     }
+
+    @include media-w($xxl) {
+      max-width: 281px;
+    }
   }
 
   &__wrapper-card {
@@ -244,6 +252,11 @@
         margin-bottom: 0;
         margin-top: 7px;
       }
+
+      @include media-w($xxl) {
+        line-height: 20px;
+        margin-top: 13px;
+      }
     }
 
     &--down {
@@ -254,6 +267,11 @@
         margin-top: 0;
         margin-bottom: 12px;
       }
+
+      @include media-w($xxl) {
+        line-height: 19px;
+        margin-bottom: 14px;
+      }
     }
   }
 
@@ -262,6 +280,11 @@
       max-width: 100%;
       width: 90%;
       height: 100%;
+    }
+
+    @include media-w($xxl) {
+      width: 130px;
+      height: 186px;
     }
   }
 
@@ -317,12 +340,17 @@
     @include media-w($xxl) {
       max-width: 310px;
       font-size: 16px;
+      margin-bottom: 12px;
     }
   }
 
   &__wrapper-list {
     @include media-w($mdb) {
       text-align: center;
+      margin-bottom: 36px;
+    }
+
+    @include media-w($xxl) {
       margin-bottom: 36px;
     }
   }
@@ -360,6 +388,11 @@
         max-width: 190px;
       }
 
+      @include media-w($xs) {
+        margin: 0px auto 34px auto;
+        max-width: 163px;
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -368,6 +401,16 @@
         width: 45px;
         height: 1px;
         background-color: $accent;
+        display: none;
+
+        @include media-w($mdb) {
+          display: block;
+        }
+
+        @include media-w($xxl) {
+          left: 57px;
+          bottom: -20px;
+        }
       }
     }
 
