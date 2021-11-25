@@ -1,0 +1,350 @@
+.types {
+  padding: 86px 0px 10px 0px;
+
+  @include media-w($mds) {
+    padding: 66px 0px 10px 0px;
+  }
+
+  @include media-w($md) {
+    padding: 56px 0px 10px 0px;
+  }
+
+  @include media-w($smz) {
+    padding: 46px 0px 10px 0px;
+  }
+
+  @include media-w($smm) {
+    padding: 36px 0px 10px 0px;
+  }
+
+  @include media-w($xs) {
+    padding: 26px 0px 10px 0px;
+  }
+
+  @include media-w($xxs) {
+    padding: 10px 0px 10px 0px;
+  }
+
+  @include media-w($xxl) {
+    padding: 0px 0px 10px 0px;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    @extend %futuraPT-400;
+    font-size: 46px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    color: $page-text;
+    margin-bottom: 82px;
+
+    @include media-w($mdb) {
+      font-size: 42px;
+      margin-bottom: 62px;
+    }
+
+    @include media-w($mdl) {
+      margin-bottom: 42px;
+      font-size: 32px;
+    }
+
+    @include media-w($xxl) {
+      margin-bottom: 19px;
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 95px;
+    margin-bottom: 156px;
+
+    @include media-w($mdb) {
+      grid-column-gap: 85px;
+    }
+
+    @include media-w($mds) {
+      grid-column-gap: 75px;
+    }
+
+    @include media-w($md) {
+      grid-column-gap: 65px;
+    }
+
+    @include media-w($mdl) {
+      grid-column-gap: 45px;
+    }
+
+    @include media-w($sm) {
+      grid-column-gap: 35px;
+    }
+
+    @include media-w($smx) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+
+  &__item {
+    &:nth-child(2) {
+      @include media-w($smx) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include media-w($smx) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &:last-child {
+      @include media-w($smx) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+      }
+
+      @include media-w($xxsl) {
+        margin-top: -32px;
+      }
+    }
+  }
+
+  &__img {
+    @include media-w($mdb) {
+      height: auto;
+      width: 100%;
+    }
+
+    &--one {
+      margin-bottom: 18px;
+
+      @include media-w($xxsl) {
+        height: 178px;
+        margin-bottom: 11px;
+      }
+    }
+
+    &--two {
+      margin-top: 32px;
+
+      @include media-w($mdb) {
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
+
+      @include media-w($xxsl) {
+        height: 178px;
+      }
+    }
+
+    &--three {
+      margin-bottom: 18px;
+
+      @include media-w($xxsl) {
+        height: 138px;
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  &__content {}
+
+  &__subtitle {
+    @extend %futuraPT-400;
+    font-size: 28px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    color: $page-text;
+    text-transform: uppercase;
+
+    @include media-w($mds) {
+      font-size: 26px;
+    }
+
+    @include media-w($md) {
+      font-size: 25px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 24px;
+    }
+
+    @include media-w($sm) {
+      font-size: 20px;
+    }
+
+    @include media-w($snm) {
+      font-size: 18px;
+    }
+
+    @include media-w($xs) {
+      font-size: 16px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 14px;
+    }
+
+    &--one {
+      margin-bottom: 8px;
+
+      @include media-w($xxsl) {
+        margin: 0px 0px 2px 5px;
+      }
+    }
+
+    &--two {
+      margin-top: -6px;
+      margin-bottom: 6px;
+
+      span {
+        @include media-w($xxl) {
+          display: none;
+        }
+      }
+
+      @include media-w($xxsl) {
+        margin-bottom: 3px;
+      }
+    }
+
+    &--three {
+      margin-bottom: 4px;
+
+      @include media-w($xxsl) {
+        margin: 0px 0px -2px 3px;
+      }
+    }
+  }
+
+  &__text {
+    @extend %roboto-300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6A88A6;
+
+    @include media-w($mdl) {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    @include media-w($smx) {
+      font-size: 14px;
+    }
+
+    @include media-w($smm) {
+      font-size: 12px;
+    }
+
+    @include media-w($xxl) {
+      font-size: 10px;
+    }
+
+    &--one {
+      max-width: 206px;
+
+      @include media-w($xxsl) {
+        margin-left: 6px;
+      }
+    }
+
+    &--two {
+      max-width: 198px;
+      margin-bottom: 32px;
+    }
+
+    &--three {
+      white-space: nowrap;
+      display: block;
+      max-width: 100%;
+
+      @include media-w($xxsl) {
+        margin: 0px 0px 0px 4px;
+      }
+    }
+  }
+
+  &__bevel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include media-w($smx) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__bevel-item {
+
+    &--one {
+      @include media-w($smx) {
+        width: 100%;
+      }
+    }
+
+    &--two {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 380px;
+      background-color: $bg;
+      color: $white;
+
+      @include media-w($smx) {
+        max-width: 100%;
+        height: 320px;
+      }
+    }
+
+    &--three {
+      @include media-w($smx) {
+        display: none;
+      }
+    }
+
+  }
+
+  &__bevel-content {
+    margin: -26px 0px 0px 26px;
+    max-width: 246px;
+  }
+
+  &__bevel-title {
+    @extend %futuraPT-500;
+    font-size: 40px;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+
+    @include media-w($mdl) {
+      font-size: 36px;
+      line-height: 1.27;
+    }
+
+    @include media-w($sm) {
+      font-size: 32px;
+    }
+  }
+
+  &__bevel-text {
+    @extend %roboto-400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__bevel-img {
+    @include media-w($smx) {
+      width: 100%;
+    }
+  }
+}
