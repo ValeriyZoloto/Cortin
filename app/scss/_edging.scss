@@ -48,7 +48,19 @@
     margin-bottom: 133px;
 
     @include media-w($mdb) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+    }
+
+    @include media-w($smx) {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-w($smm) {
+      grid-gap: 30px;
+    }
+
+    @include media-w($xss) {
       grid-gap: 20px;
     }
 
@@ -75,11 +87,15 @@
     &:first-child {
       padding-top: 40px;
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
       width: 100%;
 
       @include media-w($mdb) {
         text-align: center;
+      }
+
+      @include media-w($smx) {
+        grid-column-end: 3;
       }
     }
   }

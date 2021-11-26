@@ -1,0 +1,268 @@
+.automation {
+  padding: 117px 0px 182px 0px;
+  background-image: none;
+
+  @include media-w($sms) {
+    padding: 700px 0px 182px 0px;
+    background-image: url(../images/automation/bg.png);
+    background-repeat: no-repeat;
+    background-size: 276px 498px;
+    background-position: -2px 77px;
+  }
+
+  @include media-w($xss) {
+    background-size: 224px 499px;
+    background-position: 2px 51px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 806px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 135px;
+
+    @include media-w($sms) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    max-width: 367px;
+    margin: -32px 0px 0px -10px;
+
+    @include media-w($sms) {
+      max-width: 278px;
+      margin: -1117px 63px 0px auto;
+    }
+
+    @include media-w($ssm) {
+      max-width: 247px;
+      margin: -1117px 54px 0px auto;
+    }
+
+    @include media-w($snm) {
+      max-width: 205px;
+      margin: -1117px 54px 0px auto;
+    }
+
+    @include media-w($xss) {
+      margin: -1117px 94px 0px auto;
+    }
+
+    @include media-w($xs) {
+      margin: -1117px 73px 0px auto;
+    }
+
+    @include media-w($xxs) {
+      margin: -1117px 0px 0px auto;
+    }
+
+    @include media-w($xxl) {
+      max-width: 159px;
+      margin: -1104px 51px 0px auto;
+    }
+
+    @include media-w($xxsl) {
+      margin: -1104px 22px 0px auto;
+    }
+  }
+
+  &__title {
+    @extend %futuraPT-500;
+    font-size: 56px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    color: $page-text;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @include media-w($mdb) {
+      font-size: 42px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 32px;
+    }
+
+    @include media-w($xxl) {
+      line-height: 1.27;
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &__text {
+    max-width: 367px;
+    @extend %roboto-300;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #666666;
+
+    & span {
+      color: $accent;
+    }
+
+    @include media-w($sms) {
+      font-size: 18px;
+      line-height: 1.83;
+    }
+
+    @include media-w($ssm) {
+      font-size: 16px;
+    }
+
+    @include media-w($snm) {
+      font-size: 14px;
+    }
+
+    @include media-w($xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    @include media-w($sms) {
+      display: none;
+    }
+  }
+
+  &__quiet {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 819px;
+    height: 339px;
+    background-color: #DAC3A2;
+    border-radius: 20px;
+
+    @include media-w($smx) {
+      background-image: url(../images/automation/quet-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 348px 14px;
+    }
+
+    @include media-w($smz) {
+      background-position: 175px 122px;
+      background-size: 165px 197px;
+      height: 300px;
+    }
+
+    @include media-w($sms) {
+      background-size: 158px 155px;
+      height: 280px;
+      margin-top: -73px;
+    }
+
+    @include media-w($smm) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-radius: 0px;
+      margin-top: -100px;
+      height: 265px;
+      background-position: 148px 105px;
+      background-size: 143px 159px;
+
+    }
+  }
+
+  &__quiet-img {
+    position: absolute;
+    z-index: 1;
+    top: -107px;
+    left: 73px;
+  }
+
+  &__quiet-content {
+    position: absolute;
+    width: 398px;
+    height: 144px;
+    top: 95px;
+    right: 66px;
+
+    @include media-w($sm) {
+      right: 30px;
+    }
+
+    @include media-w($smx) {
+      top: 44px;
+      left: 24px;
+      max-width: 300px;
+    }
+
+    @include media-w($smz) {
+      max-width: 285px;
+    }
+
+    @include media-w($xxl) {
+      max-width: 170px;
+    }
+  }
+
+  &__quiet-subtitle {
+    @extend %futuraPT-400;
+    font-size: 42px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: #142536;
+
+    @include media-w($smx) {
+      font-size: 32px;
+      line-height: 1.27;
+      color: #314961;
+    }
+
+    @include media-w($smz) {
+      font-size: 30px;
+    }
+
+    @include media-w($sms) {
+      font-size: 28px;
+    }
+
+    @include media-w($smm) {
+      font-size: 26px;
+    }
+
+    @include media-w($xs) {
+      font-size: 24px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 22px;
+    }
+
+    @include media-w($xxl) {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__quiet-text {
+    @extend %roboto-300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #142536;
+
+    @include media-w($smx) {
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 1.83;
+    }
+
+    @include media-w($xxl) {
+      font-size: 12px;
+    }
+  }
+
+  &__quiet-img {
+    @include media-w($smx) {
+      display: none;
+    }
+  }
+}
