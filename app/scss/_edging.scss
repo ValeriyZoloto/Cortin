@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 35px;
-    margin-bottom: 133px;
+    margin-bottom: -91px;
 
     @include media-w($mdb) {
       grid-template-columns: repeat(3, 1fr);

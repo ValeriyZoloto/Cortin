@@ -1,9 +1,9 @@
 .automation {
-  padding: 117px 0px 182px 0px;
+  padding: 117px 0px 0px 0px;
   background-image: none;
 
   @include media-w($sms) {
-    padding: 700px 0px 182px 0px;
+    padding: 700px 0px 60px 0px;
     background-image: url(../images/automation/bg.png);
     background-repeat: no-repeat;
     background-size: 276px 498px;
