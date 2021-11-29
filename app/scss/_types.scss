@@ -55,41 +55,6 @@
     }
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 95px;
-    margin-bottom: 156px;
-
-    @include media-w($mdb) {
-      grid-column-gap: 85px;
-      margin-bottom: 146px;
-    }
-
-    @include media-w($mds) {
-      grid-column-gap: 75px;
-    }
-
-    @include media-w($md) {
-      grid-column-gap: 65px;
-    }
-
-    @include media-w($mdl) {
-      grid-column-gap: 45px;
-    }
-
-    @include media-w($sm) {
-      grid-column-gap: 35px;
-    }
-
-    @include media-w($smx) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 20px;
-      grid-row-gap: 20px;
-      margin-bottom: 38px;
-    }
-  }
-
   &__item {
     &:nth-child(2) {
       @include media-w($smx) {
@@ -424,5 +389,44 @@
     @include media-w($xxs) {
       height: 253px;
     }
+  }
+}
+
+.types-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 95px;
+  margin-bottom: 156px;
+
+  &--avstrian {
+    margin-bottom: 131px;
+  }
+
+  @include media-w($mdb) {
+    grid-column-gap: 85px;
+    margin-bottom: 146px;
+  }
+
+  @include media-w($mds) {
+    grid-column-gap: 75px;
+  }
+
+  @include media-w($md) {
+    grid-column-gap: 65px;
+  }
+
+  @include media-w($mdl) {
+    grid-column-gap: 45px;
+  }
+
+  @include media-w($sm) {
+    grid-column-gap: 35px;
+  }
+
+  @include media-w($smx) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: 38px;
   }
 }

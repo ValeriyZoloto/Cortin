@@ -1,0 +1,62 @@
+.universal {
+  padding: 145px 0px 0px 0px;
+  background: linear-gradient(180deg, #F8F5F3 0%, #FFFFFF 100%);
+  margin-bottom: -115px;
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    @extend %futuraPT-500;
+    font-size: 46px;
+    line-height: 1.28;
+    letter-spacing: 0.06em;
+    color: $page-text;
+    text-transform: uppercase;
+
+    @include media-w($mdb) {
+      font-size: 40px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    @include media-w($mdl) {
+      font-size: 36px;
+    }
+
+    @include media-w($smx) {
+      font-size: 30px;
+    }
+
+    @include media-w($smm) {
+      font-size: 26px;
+    }
+
+    @include media-w($xs) {
+      margin: 0px auto 2px auto;
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    @extend %roboto-400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: $gray;
+
+    @include media-w($smx) {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 48px;
+    }
+
+    @include media-w($xxsl) {
+      font-size: 12px;
+      margin-bottom: 28px;
+    }
+  }
+}

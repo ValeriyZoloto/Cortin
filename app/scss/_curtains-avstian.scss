@@ -1,0 +1,342 @@
+.curtains-avstian {
+  position: relative;
+  padding: 103px 0px 167px 0px;
+
+  @include media-w($smm) {
+    padding: 56px 0px 167px 0px;
+  }
+
+  @include media-w($xs) {
+    padding: 56px 0px 37px 0px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 594px;
+    height: 857px;
+    right: 13px;
+    top: 0px;
+    background-image: url(../images/curtains/curtains-bg-avstrian.png);
+    @extend %bg-center-cover;
+    z-index: 1;
+
+    @include media-w($mdb) {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 419px;
+    background-image: url(../images/curtains/curtains-bg-mobile-avstrian.png);
+    @extend %bg-center-cover;
+    z-index: -1;
+    display: none;
+
+    @include media-w($smx) {
+      display: block;
+      width: 100%;
+      height: 1326px;
+    }
+
+    @include media-w($smz) {
+      height: 1195px;
+    }
+
+    @include media-w($sms) {
+      height: 1067px;
+    }
+
+    @include media-w($ssm) {
+      height: 961px;
+    }
+
+    @include media-w($snm) {
+      height: 866px;
+    }
+
+    @include media-w($smm) {
+      height: 856px;
+    }
+
+    @include media-w($xss) {
+      height: 813px;
+    }
+
+    @include media-w($xs) {
+      height: 769px;
+    }
+
+    @include media-w($xxs) {
+      height: 687px;
+    }
+
+    @include media-w($xxl) {
+      height: 629px;
+    }
+
+    @include media-w($xxsl) {
+      height: 552px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-w($mdb) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include media-w($xs) {
+      margin-top: 61px;
+    }
+
+    @include media-w($xxsl) {
+      margin-top: 15px;
+    }
+
+  }
+
+  &__item {
+    &:first-child {
+      margin-top: -50px;
+
+      @include media-w($mdb) {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+    }
+
+    &:last-child {
+      margin-top: 126px;
+
+      @include media-w($mdb) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+
+      .curtains-avstian__casement-title {
+        color: $accent;
+      }
+    }
+  }
+
+  &__img {
+    @include media-w($mdb) {
+      height: auto;
+    }
+
+    @include media-w($xxsl) {
+      width: 280px;
+      height: 157px;
+    }
+
+    &--four {
+      margin-bottom: 23px;
+
+      @include media-w($mdb) {
+        max-width: 100%;
+        width: 800px;
+        margin-bottom: 8px;
+      }
+
+      @include media-w($smx) {
+        width: 100%;
+      }
+
+      @include media-w($xxsl) {
+        width: 280px;
+      }
+    }
+
+    &--five {
+      @include media-w($mdb) {
+        max-width: 100%;
+        width: 800px;
+        margin-bottom: 8px;
+      }
+
+      @include media-w($smx) {
+        width: 100%;
+      }
+
+      @include media-w($xxsl) {
+        width: 280px;
+      }
+    }
+  }
+
+  &__casement-title {
+    @extend %futuraPT-400;
+    font-size: 40px;
+    line-height: 1.27;
+    letter-spacing: 0.06em;
+    color: $page-text;
+
+    @include media-w($mdb) {
+      display: none;
+    }
+
+
+    &--upper {
+      margin-bottom: 12px;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-w($mdb) {
+        position: relative;
+        padding-right: 38px;
+        display: inline-block;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+
+      @include media-w($smx) {
+        font-size: 32px;
+        letter-spacing: 0.1em;
+        line-height: 1.28;
+      }
+
+      @include media-w($smz) {
+        font-size: 28px;
+      }
+
+      @include media-w($sms) {
+        font-size: 26px;
+      }
+
+      @include media-w($ssm) {
+        font-size: 24px;
+      }
+
+      @include media-w($snm) {
+        font-size: 20px;
+      }
+
+      @include media-w($smm) {
+        font-size: 18px;
+      }
+
+      @include media-w($xss) {
+        font-size: 16px;
+      }
+
+      @include media-w($xxl) {
+        font-size: 14px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 29.12px;
+        height: 5.54px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../images/curtains/casement/arrow-right.png);
+        @extend %bg-center-cover;
+      }
+
+    }
+  }
+}
+
+.curtains__list--avstrian {
+  &:first-child {
+    max-width: 100px;
+
+    @include media-w($smm) {
+      margin-right: 165px;
+    }
+  }
+
+  &:last-child {
+    max-width: 285px;
+  }
+}
+
+.curtains__wrapper--avstrian {
+  margin-left: 9px;
+  max-width: 402px;
+
+  @include media-w($mdb) {
+    max-width: 483px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.curtains__page-title--avstrian {
+  margin-bottom: 5px;
+
+  @include media-w($mdb) {
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.curtains__text--avstrian {
+  max-width: 370px;
+  margin-bottom: 52px;
+
+  @include media-w($xxsl) {
+    max-width: 247px;
+    margin-bottom: 22px;
+  }
+}
+
+.curtains__buttons--avstrian {
+  @include media-w($smx) {
+    margin: 0px auto 725px auto;
+  }
+
+  @include media-w($smz) {
+    margin: 0px auto 630px auto;
+  }
+
+  @include media-w($sms) {
+    margin: 0px auto 600px auto;
+  }
+
+  @include media-w($ssm) {
+    margin: 0px auto 500px auto;
+  }
+
+  @include media-w($snm) {
+    margin: 0px auto 470px auto;
+  }
+
+  @include media-w($xss) {
+    margin: 0px auto 400px auto;
+  }
+
+  @include media-w($xxs) {
+    margin: 0px auto 350px auto;
+  }
+
+  @include media-w($xxl) {
+    margin: 0px auto 300px auto;
+  }
+
+  @include media-w($xxsl) {
+    margin: 0px auto 328px auto;
+  }
+}

@@ -1,0 +1,59 @@
+.materials {
+  margin-top: 138px;
+  height: 607px;
+  background: rgba(18, 37, 59, 0.9);
+
+  &__inner {
+    max-width: 997px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    &:first-child {
+      padding-top: 112px;
+      padding-bottom: 78px;
+    }
+
+    &:last-child {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__subtitle {
+    max-width: 474px;
+    @extend %futuraPT-500;
+    font-size: 50px;
+    line-height: 1.28;
+    letter-spacing: 0.04em;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    max-width: 361px;
+    @extend %roboto-300;
+    font-size: 16px;
+    line-height: 2.25;
+    color: $white;
+
+    & span {
+      color: $accent;
+    }
+  }
+
+  &__img {
+    &--one {}
+
+    &--two {}
+
+    &--three {}
+
+    &--four {}
+  }
+
+
+}
