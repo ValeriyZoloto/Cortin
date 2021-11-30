@@ -1,7 +1,11 @@
 .universal {
-  padding: 145px 0px 0px 0px;
+  padding: 148px 0px 0px 0px;
   background: linear-gradient(180deg, #F8F5F3 0%, #FFFFFF 100%);
   margin-bottom: -115px;
+
+  @include media-w($xxl) {
+    padding: 70px 0px 63px 0px;
+  }
 
   &__title {
     display: block;

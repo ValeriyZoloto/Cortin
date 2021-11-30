@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 135px;
+    margin-bottom: 128px;
 
     @include media-w($sms) {
       margin-bottom: 0;
@@ -165,7 +165,11 @@
       height: 265px;
       background-position: 148px 105px;
       background-size: 143px 159px;
+    }
 
+    @include media-w($xxl) {
+      margin-top: -124px;
+      height: 265px;
     }
   }
 
