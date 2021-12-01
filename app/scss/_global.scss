@@ -243,7 +243,7 @@ body {
 
 .scroll {
   position: fixed;
-  right: 266px;
+  right: 100px;
   bottom: 261px;
   width: 50px;
   height: 50px;
@@ -268,12 +268,12 @@ body {
   }
 
   @include media-w($sm) {
-    right: 25px;
+    right: 49px;
     bottom: 134px;
   }
 
   @include media-w($smz) {
-    right: -30px;
+    right: 30px;
     bottom: 109px;
   }
 
@@ -290,8 +290,13 @@ body {
     }
 
     @include media-w($smz) {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+    }
+
+    @include media-w($xxs) {
+      width: 30px;
+      height: 30px;
     }
   }
 

@@ -2,6 +2,26 @@
   padding: 168px 0px 137px 0px;
   background-color: #FBF9F8;
 
+  @include media-w($mdb) {
+    padding: 136px 0px 116px 0px;
+  }
+
+  @include media-w($mdl) {
+    padding: 104px 0px 95px 0px;
+  }
+
+  @include media-w($smx) {
+    padding: 72px 0px 74px 0px;
+  }
+
+  @include media-w($smm) {
+    padding: 55px 0px 64px 0px;
+  }
+
+  @include media-w($xs) {
+    padding: 39px 0px 52px 0px;
+  }
+
   &__title {
     margin: 0 auto;
     text-align: center;
@@ -13,6 +33,38 @@
     color: $page-text;
     margin-bottom: 68px;
     text-transform: uppercase;
+
+    @include media-w($mdb) {
+      max-width: 544px;
+      font-size: 40px;
+      line-height: 1.4;
+      margin-bottom: 58px;
+    }
+
+    @include media-w($mdl) {
+      max-width: 433px;
+      font-size: 36px;
+      margin-bottom: 48px;
+    }
+
+    @include media-w($smx) {
+      margin-left: 0px;
+      text-align: left;
+      max-width: 407px;
+      font-size: 30px;
+      margin-bottom: 38px;
+    }
+
+    @include media-w($smm) {
+      max-width: 353px;
+      font-size: 26px;
+    }
+
+    @include media-w($xs) {
+      max-width: 272px;
+      margin: 0px auto 25px 6px;
+      font-size: 20px;
+    }
   }
 
   &__list {
@@ -36,6 +88,23 @@
       @include media-w($mds) {
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 75px;
+      }
+
+      @include media-w($mdl) {
+        margin-bottom: 65px;
+      }
+
+      @include media-w($smx) {
+        margin-bottom: 55px;
+      }
+
+      @include media-w($smz) {
+        margin-bottom: 50px;
+      }
+
+      @include media-w($xxs) {
+        margin-bottom: 41px;
       }
     }
 
@@ -78,6 +147,37 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #5B748D;
+
+    @include media-w($mdb) {
+      font-size: 30px;
+      line-height: 1.31;
+      margin-bottom: 5px;
+    }
+
+    @include media-w($mdl) {
+      font-size: 28px;
+    }
+
+    @include media-w($smx) {
+      font-size: 24px;
+    }
+
+    @include media-w($smz) {
+      font-size: 22px;
+    }
+
+    @include media-w($sms) {
+      font-size: 20px;
+    }
+
+    @include media-w($smm) {
+      font-size: 18px;
+    }
+
+    @include media-w($xxl) {
+      margin-left: 4px;
+      font-size: 16px;
+    }
   }
 
   &__text {
@@ -86,11 +186,35 @@
     line-height: 1.87;
     color: #666666;
 
+    @include media-w($mdb) {
+      line-height: 1.8;
+    }
+
+    @include media-w($mdl) {
+      font-size: 15px;
+    }
+
+    @include media-w($smx) {
+      font-size: 14px;
+    }
+
+    @include media-w($smm) {
+      font-size: 13px;
+    }
+
+    @include media-w($xxl) {
+      font-size: 12px;
+    }
+
     &--upper {
       max-width: 325px;
 
       @include media-w($mds) {
         max-width: 100%;
+      }
+
+      @include media-w($xxl) {
+        margin-left: 5px;
       }
     }
 
@@ -104,7 +228,9 @@
   }
 
   &__img {
+
     @include media-w($mds) {
+      height: auto;
       width: 800px;
     }
 
@@ -114,6 +240,26 @@
 
     @include media-w($smx) {
       width: 100%;
+    }
+  }
+
+  .solutions__img--arc {
+    @include media-w($xxl) {
+      width: 284px;
+      height: 419px;
+    }
+  }
+
+  .solutions__img--erc {
+    @include media-w($xxl) {
+      width: 280px;
+      height: 215px;
+    }
+  }
+
+  .solutions__subtitle--erc {
+    @include media-w($xxl) {
+      margin-left: -10px;
     }
   }
 }
